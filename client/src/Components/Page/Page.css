@@ -1,0 +1,10 @@
+.Page {
+    height:100%;
+    background-position: center;
+    background-size: cover;
+    /* background-image: url('../../Assets/bg1.png'); */
+}
+
+.Center {
+    background-color:black;
+}
