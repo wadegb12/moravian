@@ -14,10 +14,11 @@ export default ({ user, history }) => {
 
     return (
         <AppBar position="static">
-            <Toolbar style={{ flex: 1, color: 'black', backgroundColor: 'white' }}>
+            {/* <Toolbar style={{ flex: 1, color: 'black', backgroundColor: 'white' }}>
                 <img src={logo} width="50" height="50" />
                 <Typography variant="title" style={{ flex: 1, textAlign: 'center' }}></Typography>
-            </Toolbar>
+            </Toolbar> */}
+            <img src={logo} width="50" height="50" />
             <Tabs
                 value={history.location.pathname}
                 onChange={handleChange}
@@ -27,7 +28,9 @@ export default ({ user, history }) => {
                 style={styles.toolbar}
             >
                 <Tab label="Home" value="/" />
-                <Tab label="BookAnEvent" value="/BookAnEvent" />
+                <Tab label="Book An Event" value="/BookAnEvent" />
+                <Tab label="About Us" value="/AboutUs" />
+        
             </Tabs>
         </AppBar>
     )

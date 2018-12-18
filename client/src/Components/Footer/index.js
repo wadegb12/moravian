@@ -13,12 +13,9 @@ const styles = theme => ({
 const Footer = ({classes }) => {
 
     return (<footer className={classes.footer}>
-        <Typography variant="title" align="center" gutterBottom>
-            Oklahoma Referees
-        </Typography>
-        <Typography variant="subheading" align="center" color="textSecondary" component="p">
-            created 2018
-        </Typography>
+        {/* <Typography variant="title" align="center" gutterBottom>
+            Moravian
+        </Typography> */}
     </footer>)
 }
 
