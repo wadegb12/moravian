@@ -4,21 +4,17 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import { withStyles } from '@material-ui/core/styles';
 
 import logo from '../../Assets/Logo.png';
 
-export default ({ user, history }) => {
+const NavBar = ({ user, history }) => {
     const handleChange = (event, value) => {
         history.push(value)
     };
 
     return (
         <AppBar position="static">
-            {/* <Toolbar style={{ flex: 1, color: 'black', backgroundColor: 'white' }}>
-                <img src={logo} width="50" height="50" />
-                <Typography variant="title" style={{ flex: 1, textAlign: 'center' }}></Typography>
-            </Toolbar> */}
-            <img src={logo} width="50" height="50" />
             <Tabs
                 value={history.location.pathname}
                 onChange={handleChange}
@@ -27,6 +23,7 @@ export default ({ user, history }) => {
                 scrollButtons="auto"
                 style={styles.toolbar}
             >
+                <img src={logo} width="50" height="50" style={{margin:"0 10px 0 0"}}/>
                 <Tab label="Home" value="/" />
                 <Tab label="Book An Event" value="/BookAnEvent" />
                 <Tab label="About Us" value="/AboutUs" />
@@ -44,3 +41,5 @@ const styles = {
         backgroundBlendMode: "multiply"
     }
 }
+
+export default withStyles(styles)(NavBar);
