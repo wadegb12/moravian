@@ -8,12 +8,6 @@ import { Typography } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import ButtonBase from '@material-ui/core/ButtonBase';
 
-// const styles = theme => ({
-//     button: {
-//         margin: theme.spacing.unit,
-//       },
-// })
-
 const styles = theme => ({
     root: {
       display: 'flex',
@@ -80,11 +74,10 @@ const styles = theme => ({
       title: 'Get a Quote',
       location: 'Oklahoma City, OK',
       width: '100%',
-    //   height: '50%'
     },
   ];
 
-const ResponsiveImage = ({ src, width, height, containerClass, imgClass }) => (
+const ResponsiveImage = ({ src, width, containerClass, imgClass }) => (
     <div className={containerClass} style={{width}} >
     <div style={{ paddingBottom:'55%' }} />
       <img
@@ -94,16 +87,12 @@ const ResponsiveImage = ({ src, width, height, containerClass, imgClass }) => (
     </div>
 );
 
-const getHeightFromWidth = width =>
-    Math.floor(5.5 * (width / 10));
-
 const Landing = ({ history, classes }) => {
     return (
         <Page history={history}>
             <ResponsiveImage
                 src={photo}
                 width={100000}
-                // height={getHeightFromWidth(window.innerWidth)}
                 containerClass={classes.landingPhotoContainer}
                 imgClass={classes.responsiveImg}
             />
