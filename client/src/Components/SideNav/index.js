@@ -19,22 +19,24 @@ const SideNav = ({ user, history }) => {
       history.push(value)
   };
   return (
-    <List component="nav" className={styles.root}>
+    <List 
+        component="nav" 
+        className={styles.root}
+        // value={history.location.pathname}
+        // onChange={handleChange}
+    >
+      
       <ListItem button>
-        <ListItemText primary="Inbox" />
+        <ListItemText primary="Home" value="/"/>
       </ListItem>
       <Divider />
       <ListItem button divider>
-        <ListItemText primary="Drafts" />
+        <ListItemText primary="Get A Quote" value="/GetAQuote"/>
       </ListItem>
-      <ListItem button>
-        <ListItemText primary="Trash" />
-      </ListItem>
-      <Divider light />
-      <ListItem button>
-        <ListItemText primary="Spam" />
-      </ListItem>
+
     </List>
+
+    
   );
 }
 
