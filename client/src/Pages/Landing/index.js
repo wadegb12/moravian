@@ -45,7 +45,7 @@ const Landing = ({ history, classes }) => {
                 imgClass={classes.responsiveImg}
             />
     
-            <Footer />
+            {/* <Footer /> */}
         </Page>
     )
 }
