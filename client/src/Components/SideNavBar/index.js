@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBIcon, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn } from 'mdbreact';
 
-class SideNavPage extends React.Component {
+class SideNavBar extends React.Component {
   state = {
     isOpen: false
   }
@@ -83,4 +83,4 @@ class SideNavPage extends React.Component {
   }
 }
 
-export default SideNavPage;
+export default SideNavBar;

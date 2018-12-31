@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -15,9 +14,6 @@ const styles = theme => ({
 });
 
 const SideNav = ({ user, history }) => {
-  const handleChange = (event, value) => {
-      history.push(value)
-  };
   return (
     <List 
         component="nav" 
