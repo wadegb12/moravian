@@ -1,44 +1,86 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import SideNav from '../SideNav';
+import { MDBIcon, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn } from 'mdbreact';
 
-const styles = {
-    root: {
-        flexGrow: 1,
-    },
-    grow: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
-    },
-    background: {
-        background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
-    }
-};
+class SideNavPage extends React.Component {
+  state = {
+    isOpen: false
+  }
 
-const SideNavBar = ({ user, history }) => {
-    const handleChange = (event, value) => {
-        history.push(value)
-    };
+  handleToggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
+
+  render() {
+    const { isOpen } = this.state;
     return (
-        <div className={styles.root}>
-            <AppBar position="static">
-                <Toolbar style={styles.background}>
-                    <IconButton className={styles.menuButton} color="inherit" aria-label="Menu">
-                        <MenuIcon />
-                    </IconButton>
-                </Toolbar>
-            </AppBar>
-            <SideNav/>
-        </div>
+      <MDBContainer>
+        <MDBRow>
+          <MDBBtn onClick={this.handleToggle}><MDBIcon icon="bars" size="5x" /></MDBBtn>
+        </MDBRow>
+        <MDBSideNav
+          logo="https://mdbootstrap.com/img/logo/mdb-transparent.png"
+          hidden
+          triggerOpening={isOpen}
+          breakWidth={1300}
+          className="deep-purple darken-4"
+        >
+          <li>
+            <ul className="social">
+              <li>
+                <a href="#!">
+                  <MDBIcon icon="facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <MDBIcon icon="pinterest" />
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <MDBIcon icon="google-plus" />
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <MDBIcon icon="twitter" />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <MDBSideNavNav>
+            <MDBSideNavCat
+              name="Submit blog"
+              id="submit-blog"
+              icon="chevron-right"
+            >
+              <MDBSideNavLink>Submit listing</MDBSideNavLink>
+              <MDBSideNavLink>Registration form</MDBSideNavLink>
+            </MDBSideNavCat>
+            <MDBSideNavCat
+              name="Instruction"
+              id="instruction"
+              icon="hand-pointer-o"
+              href="#"
+            >
+              <MDBSideNavLink>For bloggers</MDBSideNavLink>
+              <MDBSideNavLink>For authors</MDBSideNavLink>
+            </MDBSideNavCat>
+            <MDBSideNavCat name="About" id="about" icon="eye">
+              <MDBSideNavLink>Instruction</MDBSideNavLink>
+              <MDBSideNavLink>Monthly meetings</MDBSideNavLink>
+            </MDBSideNavCat>
+            <MDBSideNavCat name="Contact me" id="contact-me" icon="envelope-o">
+              <MDBSideNavLink>FAQ</MDBSideNavLink>
+              <MDBSideNavLink>Write a message</MDBSideNavLink>
+            </MDBSideNavCat>
+          </MDBSideNavNav>
+        </MDBSideNav>
+      </MDBContainer>
     );
+  }
 }
 
-export default withStyles(styles)(SideNavBar);
+export default SideNavPage;
