@@ -1,19 +1,25 @@
 import React from 'react';
 import { MDBIcon, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn } from 'mdbreact';
 
-class SideNavBar extends React.Component {
-  state = {
-    isOpen: false
-  }
+// handleToggle = () => {
+//   this.setState({
+//     isOpen: !this.state.isOpen
+//   });
+// };
 
-  handleToggle = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  };
 
-  render() {
+
+const SideNavBar = ({ state }) => {
+    state = {
+      isOpen: false
+    }
+    
+    const handleToggle = (event, value) => {
+      this.setState(!this.state.isOpen)
+    };
+
     const { isOpen } = this.state;
+
     return (
       <MDBContainer>
         <MDBRow>
@@ -80,7 +86,6 @@ class SideNavBar extends React.Component {
         </MDBSideNav>
       </MDBContainer>
     );
-  }
 }
 
 export default SideNavBar;
