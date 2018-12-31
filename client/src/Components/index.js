@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Button from './Button';
 import ResponsiveImage from './ResponsiveImage';
 import SideNavBar from './SideNavBar';
+import SideNav from './SideNav';
 
 export {
     Loading,
@@ -18,4 +19,5 @@ export {
     Button,
     ResponsiveImage,
     SideNavBar,
+    SideNav,
 }
