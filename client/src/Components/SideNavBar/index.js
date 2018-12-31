@@ -19,13 +19,15 @@ const styles = {
   },
 };
 
-function ButtonAppBar(props) {
-  const { classes } = props;
+const ButtonAppBar = ({ user, history }) => {
+    const handleChange = (event, value) => {
+        history.push(value)
+    };
   return (
-    <div className={classes.root}>
+    <div className={styles.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+          <IconButton className={styles.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
         </Toolbar>
