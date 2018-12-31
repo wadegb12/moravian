@@ -1,12 +1,9 @@
 import React from 'react'
 import './landing.css'
-import { Page, Footer} from '../../Components'
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import photo from '../../Assets/HeaderV2.jpg';
-import { Typography } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
-import ButtonBase from '@material-ui/core/ButtonBase';
+import { Page, Footer, ResponsiveImage} from '../../Components'
+import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
 const styles = theme => ({
     responsiveImg: {
@@ -25,15 +22,7 @@ const styles = theme => ({
     }
   });
 
-const ResponsiveImage = ({ src, width, height, containerClass, imgClass }) => (
-    <div className={containerClass} style={{width}} >
-    <div style={{ paddingBottom:'55%' }} />
-      <img
-        src={src}
-        className={imgClass}
-      />
-    </div>
-);
+
 
 const Landing = ({ history, classes }) => {
     return (
@@ -41,6 +30,7 @@ const Landing = ({ history, classes }) => {
             <ResponsiveImage
                 src={photo}
                 width={100000}
+                paddingBottom={55}
                 containerClass={classes.landingPhotoContainer}
                 imgClass={classes.responsiveImg}
             />

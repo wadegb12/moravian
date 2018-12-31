@@ -5,6 +5,7 @@ import Page from './Page';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import Button from './Button';
+import ResponsiveImage from './ResponsiveImage';
 
 export {
     Loading,
@@ -14,4 +15,5 @@ export {
     NavBar,
     Footer,
     Button,
+    ResponsiveImage,
 }
