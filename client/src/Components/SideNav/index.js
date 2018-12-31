@@ -1,46 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 
-const styles = {
+const styles = theme => ({
   root: {
-    flexGrow: 1,
+    width: '100%',
+    maxWidth: '360px',
+    backgroundColor: theme.palette.background.paper,
   },
-  grow: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
-  background: {
-    background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
-  }
-};
+});
 
-const ButtonAppBar = ({ user, history }) => {
-    const handleChange = (event, value) => {
-        history.push(value)
-    };
+const SideNav = ({ user, history }) => {
+  const handleChange = (event, value) => {
+      history.push(value)
+  };
   return (
-    <div className={styles.root}>
-      <AppBar position="static">
-        <Toolbar style={styles.background}>
-            <IconButton className={styles.menuButton} color="inherit" aria-label="Menu">
-                <MenuIcon />
-            </IconButton>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <List component="nav" className={styles.root}>
+      <ListItem button>
+        <ListItemText primary="Inbox" />
+      </ListItem>
+      <Divider />
+      <ListItem button divider>
+        <ListItemText primary="Drafts" />
+      </ListItem>
+      <ListItem button>
+        <ListItemText primary="Trash" />
+      </ListItem>
+      <Divider light />
+      <ListItem button>
+        <ListItemText primary="Spam" />
+      </ListItem>
+    </List>
   );
 }
 
-ButtonAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(ButtonAppBar);
+export default withStyles(styles)(SideNav);

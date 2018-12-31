@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Page.css'
 import NavBar from '../NavBar'
 import Media from "react-media";
-import SideNav from '../SideNav';
+import SideNavBar from '../SideNavBar';
 
 class Page extends Component {
     render() {
@@ -12,7 +12,7 @@ class Page extends Component {
         return (
                 <div className="Page">
                     <Media query="(max-width: 599px)">
-                        <SideNav user={user} history={history} />
+                        <SideNavBar user={user} history={history} />
                     </Media>
                     <Media query="(min-width: 599px)">
                         <NavBar user={user} history={history} />
