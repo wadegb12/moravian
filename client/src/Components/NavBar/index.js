@@ -5,14 +5,21 @@ import Typography from '@material-ui/core/Typography';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { withStyles } from '@material-ui/core/styles';
-
 import logo from '../../Assets/Logo.png';
+
+const styles = {
+    toolbar: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
+        backgroundBlendMode: "multiply"
+    }
+}
 
 const NavBar = ({ user, history }) => {
     const handleChange = (event, value) => {
         history.push(value)
     };
-
     return (
         <AppBar position="static">
             <Tabs
@@ -31,15 +38,6 @@ const NavBar = ({ user, history }) => {
             </Tabs>
         </AppBar>
     )
-}
-
-const styles = {
-    toolbar: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
-        backgroundBlendMode: "multiply"
-    }
 }
 
 export default withStyles(styles)(NavBar);
