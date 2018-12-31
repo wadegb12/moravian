@@ -6,6 +6,7 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 import Button from './Button';
 import ResponsiveImage from './ResponsiveImage';
+import SideNavBar from './SideNavBar';
 
 export {
     Loading,
@@ -16,4 +17,5 @@ export {
     Footer,
     Button,
     ResponsiveImage,
+    SideNavBar,
 }
