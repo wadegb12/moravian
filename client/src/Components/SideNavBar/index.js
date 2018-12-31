@@ -17,6 +17,9 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
+  background: {
+    background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
+  }
 };
 
 const ButtonAppBar = ({ user, history }) => {
@@ -26,10 +29,10 @@ const ButtonAppBar = ({ user, history }) => {
   return (
     <div className={styles.root}>
       <AppBar position="static">
-        <Toolbar>
-          <IconButton className={styles.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
+        <Toolbar style={styles.background}>
+            <IconButton className={styles.menuButton} color="inherit" aria-label="Menu">
+                <MenuIcon />
+            </IconButton>
         </Toolbar>
       </AppBar>
     </div>
