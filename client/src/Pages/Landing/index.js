@@ -1,7 +1,7 @@
 import React from 'react'
 import './landing.css'
 import photo from '../../Assets/HeaderV2.jpg';
-import { Page, Footer, ResponsiveImage} from '../../Components'
+import { Page, ResponsiveImage} from '../../Components'
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
