@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Page, ComingSoon } from '../../Components'
 
-const BookAnEvent = (props) => {
+const GetAQuote = (props) => {
     return ( 
         <Page history={props.history}>
            <ComingSoon />
@@ -10,4 +10,4 @@ const BookAnEvent = (props) => {
     )
 }
 
-export default BookAnEvent
+export default GetAQuote

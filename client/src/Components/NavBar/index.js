@@ -25,7 +25,7 @@ const NavBar = ({ user, history }) => {
             >
                 <img src={logo} width="50" height="50" style={{margin:"0 10px 0 0"}}/>
                 <Tab label="Home" value="/" />
-                <Tab label="Book An Event" value="/BookAnEvent" />
+                <Tab label="Get A Quote" value="/GetAQuote" />
                 <Tab label="About Us" value="/AboutUs" />
         
             </Tabs>

@@ -8,7 +8,7 @@ import {Loading} from './Components'
 
 import {
   Landing,
-  BookAnEvent,
+  GetAQuote,
 } from './Pages'
 
 export const UserContext = React.createContext('GUEST')
@@ -26,7 +26,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Landing} />
-            <Route exact path="/BookAnEvent" component={BookAnEvent} />
+            <Route exact path="/GetAQuote" component={GetAQuote} />
           </Switch>
         </Router>
       );

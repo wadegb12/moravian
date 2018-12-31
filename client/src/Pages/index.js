@@ -1,7 +1,7 @@
-import BookAnEvent from './BookAnEvent'
+import GetAQuote from './GetAQuote'
 import Landing from './Landing'
 
 export {
-    BookAnEvent,
+    GetAQuote,
     Landing,
 } 
