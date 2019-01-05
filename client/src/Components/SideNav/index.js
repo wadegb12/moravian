@@ -25,15 +25,16 @@ const SideNav = ({ user, history }) => {
             // onChange={handleChange}
         >
           
-          <ListItem button>
-              <ListItemText primary="Home" value="/"/>
-          </ListItem>
-          <ListItem button divider>
-              <ListItemText primary="Get A Quote" value="/GetAQuote"/>
-          </ListItem>
-          <ListItem button divider>
-              <ListItemText primary="About Us" value="/AboutUs"/>
-          </ListItem>
+            <ListItem button>
+                <ListItemText primary="Home" value="/"/>
+            </ListItem>
+            <Divider />
+            <ListItem button divider>
+                <ListItemText primary="Get A Quote" value="/GetAQuote"/>
+            </ListItem>
+            <ListItem button divider>
+                <ListItemText primary="About Us" value="/AboutUs"/>
+            </ListItem>
 
         </List>
 
