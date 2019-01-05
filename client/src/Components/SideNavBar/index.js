@@ -12,8 +12,11 @@ const styles = {
     },
     iconColor: {
         color: "white",
+    },
+    sideBar: {
+      background: "white",
+      maxWidth: "50%",
     }
-
 };
 
 class SideNavBar extends React.Component {
@@ -37,7 +40,7 @@ class SideNavBar extends React.Component {
                     sidebar={<SideNav/>}
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
-                    styles={{ sidebar: { background: "white" } }}
+                    styles={{ sidebar: styles.sideBar} }
                 >
                     <Button onClick={() => this.onSetSidebarOpen(true)}>
                         <MenuIcon style ={styles.iconColor}/>
