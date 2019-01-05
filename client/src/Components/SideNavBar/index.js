@@ -1,91 +1,57 @@
-import React from 'react';
-import { MDBIcon, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn } from 'mdbreact';
+import React from "react";
+import Sidebar from "react-sidebar";
+import SideNav from "../SideNav";
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import MenuIcon from '@material-ui/icons/Menu';
+import Button from '@material-ui/core/IconButton';
 
-// handleToggle = () => {
-//   this.setState({
-//     isOpen: !this.state.isOpen
-//   });
-// };
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+};
 
-
-
-const SideNavBar = ({ state }) => {
-    state = {
-      isOpen: false
-    }
-    
-    const handleToggle = (event, value) => {
-      this.setState(!this.state.isOpen)
+class SideNavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sidebarOpen: false
     };
+    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+  }
 
-    const { isOpen } = this.state;
+  onSetSidebarOpen(open) {
+    this.setState({ sidebarOpen: open });
+  }
 
+  render() {
     return (
-      <MDBContainer>
-        <MDBRow>
-          <MDBBtn onClick={this.handleToggle}><MDBIcon icon="bars" size="5x" /></MDBBtn>
-        </MDBRow>
-        <MDBSideNav
-          logo="https://mdbootstrap.com/img/logo/mdb-transparent.png"
-          hidden
-          triggerOpening={isOpen}
-          breakWidth={1300}
-          className="deep-purple darken-4"
-        >
-          <li>
-            <ul className="social">
-              <li>
-                <a href="#!">
-                  <MDBIcon icon="facebook" />
-                </a>
-              </li>
-              <li>
-                <a href="#!">
-                  <MDBIcon icon="pinterest" />
-                </a>
-              </li>
-              <li>
-                <a href="#!">
-                  <MDBIcon icon="google-plus" />
-                </a>
-              </li>
-              <li>
-                <a href="#!">
-                  <MDBIcon icon="twitter" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          <MDBSideNavNav>
-            <MDBSideNavCat
-              name="Submit blog"
-              id="submit-blog"
-              icon="chevron-right"
+      <AppBar position="static">
+            <Toolbar />
+            <Sidebar
+                sidebar={<SideNav/>}
+                open={this.state.sidebarOpen}
+                onSetOpen={this.onSetSidebarOpen}
+                styles={{ sidebar: { background: "white" } }}
             >
-              <MDBSideNavLink>Submit listing</MDBSideNavLink>
-              <MDBSideNavLink>Registration form</MDBSideNavLink>
-            </MDBSideNavCat>
-            <MDBSideNavCat
-              name="Instruction"
-              id="instruction"
-              icon="hand-pointer-o"
-              href="#"
-            >
-              <MDBSideNavLink>For bloggers</MDBSideNavLink>
-              <MDBSideNavLink>For authors</MDBSideNavLink>
-            </MDBSideNavCat>
-            <MDBSideNavCat name="About" id="about" icon="eye">
-              <MDBSideNavLink>Instruction</MDBSideNavLink>
-              <MDBSideNavLink>Monthly meetings</MDBSideNavLink>
-            </MDBSideNavCat>
-            <MDBSideNavCat name="Contact me" id="contact-me" icon="envelope-o">
-              <MDBSideNavLink>FAQ</MDBSideNavLink>
-              <MDBSideNavLink>Write a message</MDBSideNavLink>
-            </MDBSideNavCat>
-          </MDBSideNavNav>
-        </MDBSideNav>
-      </MDBContainer>
+                <Button onClick={() => this.onSetSidebarOpen(true)}>
+                    <MenuIcon />
+                </Button>
+            </Sidebar>
+        </AppBar>
+      
     );
+  }
 }
 
 export default SideNavBar;
+
+
