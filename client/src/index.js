@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 var config = {
     apiKey: "AIzaSyDPjSPxYq8G0tf1AkFQM0ldDXUaWNGnqR8",
