@@ -8,6 +8,7 @@ import Button from './Button';
 import ResponsiveImage from './ResponsiveImage';
 import SideNavBar from './SideNavBar';
 import SideNav from './SideNav';
+import GetAQuoteForm from './GetAQuoteForm';
 
 export {
     Loading,
@@ -20,4 +21,5 @@ export {
     ResponsiveImage,
     SideNavBar,
     SideNav,
+    GetAQuoteForm,
 }
