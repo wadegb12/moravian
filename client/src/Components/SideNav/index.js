@@ -1,44 +1,32 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom'
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
-const styles = theme => ({
-    root: {
-        width: '100%',
-        maxWidth: '360px',
-        backgroundColor: theme.palette.background.paper,
-    },
-});
+const styles = {
+};
 
 const SideNav = ({ user, history }) => {
-    const handleChange = (event, value) => {
-        history.push(value)
-    };
     return (
         <List 
             component="nav" 
-            className={styles.root}
-            // value={history.location.pathname}
-            // onChange={handleChange}
-        >
-          
-            <ListItem button>
-                <ListItemText primary="Home" value="/"/>
-            </ListItem>
-            <Divider />
-            <ListItem button divider>
-                <ListItemText primary="Get A Quote" value="/GetAQuote"/>
-            </ListItem>
-            <ListItem button divider>
-                <ListItemText primary="About Us" value="/AboutUs"/>
-            </ListItem>
-
+            style={styles.root}
+        >   
+            <Button component={Link} to="/">
+                <Typography> Home </Typography>
+            </Button>
+            <Divider/>
+            <Button component={Link} to="/GetAQuote">
+                <Typography> Get A Quote </Typography>
+            </Button>
+            <Divider/>
+            <Button component={Link} to="/AboutUs">
+                <Typography > About Us </Typography>
+            </Button>
         </List>
-
-      
     );
 }
 
