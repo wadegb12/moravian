@@ -28,7 +28,6 @@ const SideNav = ({ user, history }) => {
           <ListItem button>
               <ListItemText primary="Home" value="/"/>
           </ListItem>
-          <Divider />
           <ListItem button divider>
               <ListItemText primary="Get A Quote" value="/GetAQuote"/>
           </ListItem>
