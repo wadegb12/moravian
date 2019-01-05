@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { Page, ComingSoon } from '../../Components'
+import { Page, GetAQuoteForm } from '../../Components'
 
-const GetAQuote = (props) => {
+const AboutUs = (props) => {
     return ( 
         <Page history={props.history}>
-           <ComingSoon />
+           <GetAQuoteForm />
         </Page>
     )
 }
 
-export default GetAQuote
+export default AboutUs
