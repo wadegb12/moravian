@@ -17,39 +17,46 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
+  sideNavBackgroundColor: {
+    background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
+  },
+  iconColor: {
+    color: "white",
+
+  }
+
 };
 
 class SideNavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sidebarOpen: false
-    };
-    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            sidebarOpen: false
+        };
+        this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+    }
 
-  onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });
-  }
+    onSetSidebarOpen(open) {
+        this.setState({ sidebarOpen: open });
+    }
 
-  render() {
-    return (
-      <AppBar position="static">
-            <Toolbar />
-            <Sidebar
-                sidebar={<SideNav/>}
-                open={this.state.sidebarOpen}
-                onSetOpen={this.onSetSidebarOpen}
-                styles={{ sidebar: { background: "white" } }}
-            >
-                <Button onClick={() => this.onSetSidebarOpen(true)}>
-                    <MenuIcon />
-                </Button>
-            </Sidebar>
-        </AppBar>
-      
-    );
-  }
+    render() {
+        return (
+            <AppBar position="static">
+                <Toolbar style={styles.sideNavBackgroundColor}/>
+                <Sidebar
+                    sidebar={<SideNav/>}
+                    open={this.state.sidebarOpen}
+                    onSetOpen={this.onSetSidebarOpen}
+                    styles={{ sidebar: { background: "white" } }}
+                >
+                    <Button onClick={() => this.onSetSidebarOpen(true)}>
+                        <MenuIcon style ={styles.iconColor}/>
+                    </Button>
+                </Sidebar>
+            </AppBar>
+        );
+    }
 }
 
 export default SideNavBar;
