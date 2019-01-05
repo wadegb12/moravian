@@ -38,7 +38,7 @@ class SideNavBar extends React.Component {
             <AppBar position="static">
                 <Toolbar style={styles.sideNavBackgroundColor}/>
                 <Sidebar
-                    sidebar={<SideNav style={styles.sideNavBackgroundColor}/>}
+                    sidebar={<SideNav/>}
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
                     styles={{ sidebar: styles.sideBar} }
