@@ -15,7 +15,8 @@ const styles = {
     },
     sideBar: {
       background: "white",
-      maxWidth: "50%",
+      width: "100%",
+      maxWidth: "40%",
     }
 };
 
