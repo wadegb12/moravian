@@ -34,12 +34,12 @@ const SideNav = ({ user, history }) => {
                 <Typography style={styles.whiteColor}> Home </Typography>
             </Button>
             <Divider/>
-            <Button component={Link} to="/GetAQuote">
-                <Typography style={styles.whiteColor}> Get A Quote </Typography>
-            </Button>
-            <Divider/>
             <Button component={Link} to="/AboutUs">
                 <Typography style={styles.whiteColor}> About Us </Typography>
+            </Button>
+            <Divider/>
+            <Button component={Link} to="/GetAQuote">
+                <Typography style={styles.whiteColor}> Get A Quote </Typography>
             </Button>
         </List>
     );
