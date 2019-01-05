@@ -19,9 +19,6 @@ const styles = {
     whiteColor: {
         color: "#ffffff"
     },
-    whiteBackgroungColor: {
-        backgroundColor: "#ffffff"
-    }
 };
 
 const SideNav = ({ user, history }) => {
@@ -36,7 +33,7 @@ const SideNav = ({ user, history }) => {
             <Button component={Link} to="/">
                 <Typography style={styles.whiteColor}> Home </Typography>
             </Button>
-            <Divider classes={styles.whiteBackgroungColor}/>
+            <Divider/>
             <Button component={Link} to="/GetAQuote">
                 <Typography style={styles.whiteColor}> Get A Quote </Typography>
             </Button>
