@@ -1,7 +1,9 @@
-import GetAQuote from './GetAQuote'
 import Landing from './Landing'
+import GetAQuote from './GetAQuote'
+import AboutUs from './AboutUs'
 
 export {
-    GetAQuote,
     Landing,
+    GetAQuote,
+    AboutUs,
 } 
