@@ -8,6 +8,20 @@ import Typography from '@material-ui/core/Typography';
 import logo from '../../Assets/Logo.png';
 
 const styles = {
+    root: {
+        height: "100%",
+        background: "#323031"
+    },
+    backgroundColor: {
+        width: "100%",
+        background: "#323031",
+    },
+    whiteColor: {
+        color: "#ffffff"
+    },
+    whiteBackgroungColor: {
+        backgroundColor: "#ffffff"
+    }
 };
 
 const SideNav = ({ user, history }) => {
@@ -16,19 +30,19 @@ const SideNav = ({ user, history }) => {
             component="nav" 
             style={styles.root}
         >   
-            <div>
-                <img src={logo} width="50" height="50" style={{margin:"0 10px 0 0"}}/>
+            <div style={styles.backgroundColor}>
+                <img src={logo} width="144" height="144" style={{margin:"0 10px 0 0"}}/>
             </div>
             <Button component={Link} to="/">
-                <Typography> Home </Typography>
+                <Typography style={styles.whiteColor}> Home </Typography>
             </Button>
-            <Divider/>
+            <Divider classes={styles.whiteBackgroungColor}/>
             <Button component={Link} to="/GetAQuote">
-                <Typography> Get A Quote </Typography>
+                <Typography style={styles.whiteColor}> Get A Quote </Typography>
             </Button>
             <Divider/>
             <Button component={Link} to="/AboutUs">
-                <Typography > About Us </Typography>
+                <Typography style={styles.whiteColor}> About Us </Typography>
             </Button>
         </List>
     );

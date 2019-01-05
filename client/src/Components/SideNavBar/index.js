@@ -8,7 +8,7 @@ import Button from '@material-ui/core/IconButton';
 
 const styles = {
     sideNavBackgroundColor: {
-        background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
+        background: "#323031",
     },
     iconColor: {
         color: "white",
@@ -38,7 +38,7 @@ class SideNavBar extends React.Component {
             <AppBar position="static">
                 <Toolbar style={styles.sideNavBackgroundColor}/>
                 <Sidebar
-                    sidebar={<SideNav/>}
+                    sidebar={<SideNav style={styles.sideNavBackgroundColor}/>}
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
                     styles={{ sidebar: styles.sideBar} }
