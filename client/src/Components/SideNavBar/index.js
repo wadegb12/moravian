@@ -7,23 +7,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/IconButton';
 
 const styles = {
-  root: {
-    flexGrow: 1,
-  },
-  grow: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
-  sideNavBackgroundColor: {
-    background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
-  },
-  iconColor: {
-    color: "white",
-
-  }
+    sideNavBackgroundColor: {
+        background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
+    },
+    iconColor: {
+        color: "white",
+    }
 
 };
 
