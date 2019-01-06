@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const nodemailer = requrie('nodemailer')
+const nodemailer = require('nodemailer')
 const app = express()
 
 app.use(bodyParser.json())
@@ -22,15 +22,15 @@ app.post('/api/form', (req, res) => {
             host: 'smtp.ethereal.email',
             port: 587,
             auth: {
-                user: '',
-                pass: ''
+                user: 'hsrre3sq66yjelys@ethereal.email',
+                pass: 'Fgb4qSgjJHdRGvBSEk'
             }
         })
 
         let mailOptions = {
-            from: '',
-            to: '',
-            replyto: '',
+            from: 'test@testaccount.com',
+            to: 'hsrre3sq66yjelys@ethereal.email',
+            replyto: 'test@testaccount.com',
             subject: 'Quote Requested',
             text: req.body.message,
             html: htmlEmail
