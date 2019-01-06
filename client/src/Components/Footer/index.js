@@ -1,5 +1,6 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
+import { Typography} from '@material-ui/core/Typography'
 
 
 const styles = theme => ({
@@ -12,9 +13,9 @@ const styles = theme => ({
 const Footer = ({classes }) => {
 
     return (<footer className={classes.footer}>
-        {/* <Typography variant="title" align="center" gutterBottom>
-            Moravian
-        </Typography> */}
+        <Typography variant="title" align="center" gutterBottom>
+            Contact Us
+        </Typography>
     </footer>)
 }
 
