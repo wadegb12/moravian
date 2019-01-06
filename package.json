@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrntly \" npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -16,12 +19,5 @@
   "bugs": {
     "url": "https://github.com/wadegb12/moravian/issues"
   },
-  "homepage": "https://github.com/wadegb12/moravian#readme",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "concurrently": "^4.1.0",
-    "express": "^4.16.4",
-    "nodemailer": "^5.0.0",
-    "nodemon": "^1.18.9"
-  }
+  "homepage": "https://github.com/wadegb12/moravian#readme"
 }
