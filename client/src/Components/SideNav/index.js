@@ -27,8 +27,8 @@ const SideNav = ({ user, history }) => {
             component="nav" 
             style={styles.root}
         >   
-            <div style={styles.backgroundColor}>
-                <img src={logo} width="144" height="144" style={{margin:"0 10px 0 0"}}/>
+            <div  align="center" style={{margin:"10px"}}>
+                <img src={logo} width="144" height="144" />
             </div>
             <Button component={Link} to="/">
                 <Typography style={styles.whiteColor}> Home </Typography>
