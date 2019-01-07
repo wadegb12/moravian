@@ -30,22 +30,21 @@ const styles = theme => ({
     imageSize: {
         maxWidth: '50%',
     },
+    getAQuoteContainer: {
+        background: "#323031",
+        padding: '32px'
+    },
     getAQuoteText: {
-        fontSize: '32px',
+        font: "verlag",
+        fontSize: "32",
+        color: "#ffffff"
     }
   });
 
 const Landing = ({ history, classes }) => {
     return (
         <Page history={history}>
-            <div align="center" >
-                <Typography className={classes.getAQuoteText}>
-                    Get A Quote
-                </Typography>
-                <Typography className={classes.getAQuoteText}>
-                    Based in Oklahoma City, OK
-                </Typography>
-            </div>
+            
             <ResponsiveImage
                 src={photo}
                 width={100000}
@@ -53,6 +52,14 @@ const Landing = ({ history, classes }) => {
                 containerClass={classes.landingPhotoContainer}
                 imgClass={classes.responsiveImg}
             />
+            <div align= "center"  className={classes.getAQuoteContainer} >
+                <Typography className={classes.getAQuoteText}>
+                    Get A Quote
+                </Typography>
+                <Typography className={classes.getAQuoteText}>
+                    Based in Oklahoma City, OK
+                </Typography>
+            </div>
             <Media query="(max-width: 600px)">
                 <div align="center" >
                     <img src={pouringPhoto} className={classes.smallScreenImageSize}/>
