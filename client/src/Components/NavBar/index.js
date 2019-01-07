@@ -11,7 +11,6 @@ const styles = {
         alignItems: 'center',
         background: "#323031",
         backgroundBlendMode: "multiply",
-        // height:"75px"
     }
 }
 
