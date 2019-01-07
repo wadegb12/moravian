@@ -3,6 +3,7 @@ import './Page.css'
 import NavBar from '../NavBar'
 import Media from "react-media";
 import SideNavBar from '../SideNavBar';
+import Footer from '../Footer'
 
 class Page extends Component {
     render() {
@@ -18,6 +19,8 @@ class Page extends Component {
                         <NavBar user={user} history={history} />
                     </Media>
                     {children}
+
+                    <Footer/>
                 </div>
         )
     }
