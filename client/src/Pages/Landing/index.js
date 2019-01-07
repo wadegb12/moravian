@@ -5,7 +5,7 @@ import { Page, ResponsiveImage} from '../../Components'
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import pouringPhoto from '../../Assets/pouringCoffee.jpg';
-import coffeeArt from '../../Assets/coffeeArt.jpg';
+import coffeeArtPhoto from '../../Assets/coffeeArt.jpg';
 import Media from "react-media";
 
 const styles = theme => ({
@@ -23,11 +23,11 @@ const styles = theme => ({
         maxWidth: '100%',
         maxHeight: '100vh'
     },
-    container: {
-        display: 'flex'
+    smallScreenImageSize: {
+        maxWidth: '100%',
     },
     imageSize: {
-        maxWidth: '100%',
+        maxWidth: '50%',
     }
   });
 
@@ -41,16 +41,16 @@ const Landing = ({ history, classes }) => {
                 containerClass={classes.landingPhotoContainer}
                 imgClass={classes.responsiveImg}
             />
-            <Media query="(max-width: 599px)">
-                <div styles={classes.container} align="center" >
-                    <img src={pouringPhoto} className={classes.imageSize}/>
-                    <img src={coffeeArt} className={classes.imageSize}/>
+            <Media query="(max-width: 600px)">
+                <div  align="center" >
+                    <img src={pouringPhoto} className={classes.smallScreenImageSize}/>
+                    <img src={coffeeArtPhoto} className={classes.smallScreenImageSize}/>
                 </div>
             </Media>
-            <Media query="(min-width: 599px)">
-                <div styles={classes.container} align="center" >
+            <Media query="(min-width: 600px)">
+                <div  align="center" >
                     <img src={pouringPhoto} className={classes.imageSize}/>
-                    <img src={coffeeArt} className={classes.imageSize}/>
+                    <img src={coffeeArtPhoto} className={classes.imageSize}/>
                 </div>
             </Media>
         </Page>
