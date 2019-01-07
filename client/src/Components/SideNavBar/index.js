@@ -7,14 +7,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/IconButton';
 
 const styles = {
-    sideNavBackgroundColor: {
+    sideNavBar: {
+        height: "70px",
         background: "#323031",
     },
     iconColor: {
         color: "white",
     },
-    sideBar: {
-      background: "white",
+    sideNav: {
       width: "100%",
       maxWidth: "50%",
     }
@@ -36,12 +36,12 @@ class SideNavBar extends React.Component {
     render() {
         return (
             <AppBar position="static">
-                <Toolbar style={styles.sideNavBackgroundColor}/>
+                <Toolbar style={styles.sideNavBar}/>
                 <Sidebar
                     sidebar={<SideNav/>}
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
-                    styles={{ sidebar: styles.sideBar} }
+                    styles={{ sidebar: styles.sideNav} }
                 >
                     <Button onClick={() => this.onSetSidebarOpen(true)}>
                         <MenuIcon style ={styles.iconColor}/>
