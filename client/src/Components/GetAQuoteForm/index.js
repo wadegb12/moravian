@@ -41,10 +41,17 @@ class GetAQuoteForm extends Component {
         return ( 
             <Form onSubmit={this.handleSubmit} style={ styles.formWidth }>
                 <FormGroup>
-                    <Label for="name"> Name: </Label>
+                    <Label for="firstName"> First Name: </Label>
                     <Input
                         type="text"
-                        name="name"
+                        name="firstName"
+                        onChange={this.handleChange} />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="lastName"> Last Name: </Label>
+                    <Input
+                        type="text"
+                        name="lastName"
                         onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup>
@@ -55,7 +62,14 @@ class GetAQuoteForm extends Component {
                         onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="message"> Message: </Label>
+                    <Label for="location"> Location: </Label>
+                    <Input
+                        type="text"
+                        name="location"
+                        onChange={this.handleChange} />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="message"> Comments: </Label>
                     <Input
                         type="textarea"
                         name="message"
