@@ -52,14 +52,14 @@ const Landing = ({ history, classes }) => {
                 containerClass={classes.landingPhotoContainer}
                 imgClass={classes.responsiveImg}
             />
-            <div align= "center"  className={classes.getAQuoteContainer} >
+            {/* <div align= "center"  className={classes.getAQuoteContainer} >
                 <Typography className={classes.getAQuoteText}>
                     Get A Quote
                 </Typography>
                 <Typography className={classes.getAQuoteText}>
                     Based in Oklahoma City, OK
                 </Typography>
-            </div>
+            </div> */}
             <Media query="(max-width: 600px)">
                 <div align="center" >
                     <img src={pouringPhoto} className={classes.smallScreenImageSize}/>
