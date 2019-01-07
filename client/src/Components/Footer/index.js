@@ -7,7 +7,6 @@ import facebookLogo from '../../Assets/facebookLogo.png';
 const styles = theme => ({
     footer: {
         backgroundColor: "#323031",
-        // backgroundColor: theme.palette.background.paper,
         padding: theme.spacing.unit * 4,
     },
     footerTextColor: {
