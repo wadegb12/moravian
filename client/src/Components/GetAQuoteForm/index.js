@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Form, FormGroup, Input, Label, Button} from 'reactstrap'
 import axios from 'axios'
+import CustomDropdown from '../CustomDropdown'
 
 const styles = {
     formWidth: {
@@ -67,6 +68,10 @@ class GetAQuoteForm extends Component {
                         type="text"
                         name="location"
                         onChange={this.handleChange} />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="numAttendees"> Number of Attendees: </Label>
+                    <CustomDropdown/>
                 </FormGroup>
                 <FormGroup>
                     <Label for="message"> Comments: </Label>
