@@ -5,7 +5,7 @@ import List from '@material-ui/core/List';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
-import logo from '../../Assets/Logo.png';
+import logo from '../../Assets/moravianLogo.png';
 
 const styles = {
     root: {
