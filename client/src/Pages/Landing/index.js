@@ -9,7 +9,7 @@ import coffeeArtPhoto from '../../Assets/coffeeArt.jpg';
 import Media from "react-media";
 import { Typography } from '@material-ui/core';
 
-const styles = theme => ({
+const styles = ({
     responsiveImg: {
       position: 'absolute',
       left: 0,
