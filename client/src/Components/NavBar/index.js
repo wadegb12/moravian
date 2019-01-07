@@ -10,7 +10,8 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         background: "#323031",
-        backgroundBlendMode: "multiply"
+        backgroundBlendMode: "multiply",
+        // height:"75px"
     }
 }
 
@@ -18,8 +19,9 @@ const NavBar = ({ user, history }) => {
     const handleChange = (event, value) => {
         history.push(value)
     };
+
     return (
-        <AppBar position="static">
+        <AppBar position="static" >
             <Tabs
                 value={history.location.pathname}
                 onChange={handleChange}
@@ -28,11 +30,10 @@ const NavBar = ({ user, history }) => {
                 scrollButtons="auto"
                 style={styles.toolbar}
             >
-                <img src={logo} width="50" height="50" style={{margin:"0 10px 0 0"}}/>
+                <img src={logo} width="50" height="50" style={{margin:"10px"}}/>
                 <Tab label="Home" value="/" />
                 <Tab label="About Us" value="/AboutUs" />
                 <Tab label="Get A Quote" value="/GetAQuote" />
-        
             </Tabs>
         </AppBar>
     )
