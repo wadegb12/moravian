@@ -21,7 +21,7 @@ const styles = {
     },
 };
 
-const SideNav = ({ user, history }) => {
+const SideNav = ({ classes }) => {
     return (
         <List 
             component="nav" 
@@ -31,15 +31,15 @@ const SideNav = ({ user, history }) => {
                 <img src={logo} width="144" height="144" />
             </div>
             <Button component={Link} to="/">
-                <Typography style={styles.whiteColor}> Home </Typography>
+                <Typography className={classes.whiteColor}> Home </Typography>
             </Button>
             <Divider/>
             <Button component={Link} to="/AboutUs">
-                <Typography style={styles.whiteColor}> About Us </Typography>
+                <Typography className={classes.whiteColor}> About Us </Typography>
             </Button>
             <Divider/>
             <Button component={Link} to="/GetAQuote">
-                <Typography style={styles.whiteColor}> Get A Quote </Typography>
+                <Typography className={classes.whiteColor}> Get A Quote </Typography>
             </Button>
         </List>
     );
