@@ -7,7 +7,6 @@ import Footer from '../Footer'
 
 class Page extends Component {
     render() {
-
         const { children, history, user } = this.props
 
         return (
