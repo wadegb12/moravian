@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import pouringPhoto from '../../Assets/pouringCoffee.jpg';
 import coffeeArtPhoto from '../../Assets/coffeeArt.jpg';
 import Media from "react-media";
+import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
     responsiveImg: {
@@ -28,12 +29,23 @@ const styles = theme => ({
     },
     imageSize: {
         maxWidth: '50%',
+    },
+    getAQuoteText: {
+        fontSize: '32px',
     }
   });
 
 const Landing = ({ history, classes }) => {
     return (
         <Page history={history}>
+            <div align="center" >
+                <Typography className={classes.getAQuoteText}>
+                    Get A Quote
+                </Typography>
+                <Typography className={classes.getAQuoteText}>
+                    Based in Oklahoma City, OK
+                </Typography>
+            </div>
             <ResponsiveImage
                 src={photo}
                 width={100000}
@@ -42,7 +54,7 @@ const Landing = ({ history, classes }) => {
                 imgClass={classes.responsiveImg}
             />
             <Media query="(max-width: 600px)">
-                <div  align="center" >
+                <div align="center" >
                     <img src={pouringPhoto} className={classes.smallScreenImageSize}/>
                     <img src={coffeeArtPhoto} className={classes.smallScreenImageSize}/>
                 </div>
