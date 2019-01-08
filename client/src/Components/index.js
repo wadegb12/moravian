@@ -9,7 +9,6 @@ import ResponsiveImage from './ResponsiveImage';
 import SideNavBar from './SideNavBar';
 import SideNav from './SideNav';
 import GetAQuoteForm from './GetAQuoteForm';
-import CustomDropdown from './CustomDropdown';
 
 export {
     Loading,
@@ -23,5 +22,4 @@ export {
     SideNavBar,
     SideNav,
     GetAQuoteForm,
-    CustomDropdown,
 }
