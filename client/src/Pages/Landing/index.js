@@ -60,7 +60,7 @@ const Landing = ({ history, classes }) => {
                     Based in Oklahoma City, OK
                 </Typography>
             </div> */}
-            <Media query="(max-width: 600px)">
+            <Media query="(max-width: 599px)">
                 <div align="center" >
                     <img src={pouringPhoto} className={classes.smallScreenImageSize}/>
                     <img src={coffeeArtPhoto} className={classes.smallScreenImageSize}/>
