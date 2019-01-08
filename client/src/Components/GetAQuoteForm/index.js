@@ -84,6 +84,14 @@ class GetAQuoteForm extends Component {
                     </FormGroup>
 
                     <FormGroup>
+                        <Label for="location"> Location: </Label>
+                            <Input
+                                type="text"
+                                name="location"
+                                onChange={this.handleChange} />
+                    </FormGroup>
+
+                    <FormGroup>
                         <Label for="location"> Type of Event: </Label>
                             <Input
                                 type="text"
@@ -91,13 +99,47 @@ class GetAQuoteForm extends Component {
                                 onChange={this.handleChange} />
                     </FormGroup>
 
-                    <FormGroup>
-                        <Label for="location"> Location: </Label>
-                            <Input
-                                type="text"
-                                name="location"
-                                onChange={this.handleChange} />
-                    </FormGroup>
+                    <Row>
+                        <Col>
+                            <Label for="numAttendees"> Guest Count: </Label>
+                        </Col>
+                        <Col>
+                            <FormGroup>
+                                <Input 
+                                    style={styles.inputFieldMaxWidth}
+                                    type="select"
+                                    name="numGuests"
+                                    onChange={this.handleChange} 
+                                >
+                                    <option>0-50</option>
+                                    <option>50-100</option>
+                                    <option>100-150</option>
+                                    <option>150-200</option>
+                                    <option>200+</option> 
+                                </Input>
+                            </FormGroup>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col>
+                            <Label for="bar"> Type of Bar: </Label>
+                        </Col>
+                        <Col>
+                            <FormGroup>
+                                <Input 
+                                    style={styles.barTypeWidth}
+                                    type="select"
+                                    name="bar"
+                                    onChange={this.handleChange} 
+                                >
+                                    <option>Espresso</option>
+                                    <option>Pour Over</option>
+                                    <option>Both</option>
+                                </Input>
+                            </FormGroup>
+                        </Col>
+                    </Row>
 
                     <Row>
                         <Col>
@@ -194,48 +236,6 @@ class GetAQuoteForm extends Component {
                                 >
                                     <option>AM</option>
                                     <option>PM</option>
-                                </Input>
-                            </FormGroup>
-                        </Col>
-                    </Row>
-
-                    <Row>
-                        <Col>
-                            <Label for="numAttendees"> Guest Count: </Label>
-                        </Col>
-                        <Col>
-                            <FormGroup>
-                                <Input 
-                                    style={styles.inputFieldMaxWidth}
-                                    type="select"
-                                    name="numGuests"
-                                    onChange={this.handleChange} 
-                                >
-                                    <option>0-50</option>
-                                    <option>50-100</option>
-                                    <option>100-150</option>
-                                    <option>150-200</option>
-                                    <option>200+</option> 
-                                </Input>
-                            </FormGroup>
-                        </Col>
-                    </Row>
-
-                    <Row>
-                        <Col>
-                            <Label for="bar"> Type of Bar: </Label>
-                        </Col>
-                        <Col>
-                            <FormGroup>
-                                <Input 
-                                    style={styles.barTypeWidth}
-                                    type="select"
-                                    name="bar"
-                                    onChange={this.handleChange} 
-                                >
-                                    <option>Espresso</option>
-                                    <option>Pour Over</option>
-                                    <option>Both</option>
                                 </Input>
                             </FormGroup>
                         </Col>
