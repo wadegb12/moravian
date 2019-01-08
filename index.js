@@ -9,13 +9,19 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.post('/api/form', (req, res) => {
     nodemailer.createTestAccount((err,account) => {
         const htmlEmail = `
-            <h3>Contact Details</h3>
             <ul>
-                <li>Name: ${req.body.name}</li>
+                <li>First Name: ${req.body.firstName}</li>
+                <li>Last Name: ${req.body.lastName}</li>
                 <li>Email: ${req.body.email}</li>
+                <li>Location: ${req.body.location}</li>
+                <li>Type of Even: ${req.body.eventType}</li>
+                <li>Guest Count: ${req.body.guestCount}</li>
+                <li>Type of Bar: ${req.body.barType}</li>
+                <li>Date: ${req.body.date}</li>
+                <li>Start Time: ${req.body.startTime} ${req.body.startTimeAmPm}</li>
+                <li>End Time: ${req.body.endTime} ${req.body.endTimeAmPm}</li>
+                <li>Comments: ${req.body.comments}</li>
             </ul>
-            <h3>Message</h3>
-            <p>${req.body.message}</p>
         `
 
         let transporter = nodemailer.createTransport({

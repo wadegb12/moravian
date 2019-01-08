@@ -1,15 +1,11 @@
 import React, {Component} from 'react'
 import { Col, Row, Form, FormGroup, Input, Label, Button} from 'reactstrap'
 import axios from 'axios'
-import Typography from '@material-ui/core/Typography';
 
 const styles = {
     formContainer: {
         padding: '20px',
         maxWidth: '600px'
-    },
-    barTypeWidth: {
-        maxWidth: '120px'
     },
     inputFieldMaxWidth: {
         maxWidth: '120px'
@@ -23,9 +19,9 @@ class GetAQuoteForm extends Component {
         super()
 
         this.state = {
-            name: '',
-            email: '',
-            message: ''
+            firstName: '', lastName: '', email: '', location: '', eventType: '', 
+            guestCount: '0-50', barType: 'Espresso', date: '', startTime: '', startTimeAmPm: 'Am', 
+            endTime: '', endTimeAmPm: 'Am', comments: ''
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -39,12 +35,12 @@ class GetAQuoteForm extends Component {
     async handleSubmit(e) {
         e.preventDefault()
 
-        const { name, email, message } = this.state
+        const { firstName, lastName, email, location, eventType, guestCount, barType, date, 
+                startTime, startTimeAmPm, endTime, endTimeAmPm, comments } = this.state
 
         const form = await axios.post('/api/form', {
-            name,
-            email,
-            message
+            firstName, lastName, email, location, eventType, guestCount, barType, date, 
+            startTime, startTimeAmPm, endTime, endTimeAmPm, comments
         })
     }
 
@@ -54,7 +50,7 @@ class GetAQuoteForm extends Component {
                 <Form onSubmit={this.handleSubmit}>
 
                     <Row form >
-                        <Label for="email" sm={12}> Name: </Label>
+                        <Label sm={12}> Name: </Label>
                         <Col>
                             <FormGroup inline >
                                 <Input
@@ -76,7 +72,7 @@ class GetAQuoteForm extends Component {
                     </Row>
                 
                     <FormGroup>
-                        <Label for="email"> Email: </Label>
+                        <Label> Email: </Label>
                             <Input
                                 type="email"
                                 name="email"
@@ -84,7 +80,7 @@ class GetAQuoteForm extends Component {
                     </FormGroup>
 
                     <FormGroup>
-                        <Label for="location"> Location: </Label>
+                        <Label> Location: </Label>
                             <Input
                                 type="text"
                                 name="location"
@@ -92,7 +88,7 @@ class GetAQuoteForm extends Component {
                     </FormGroup>
 
                     <FormGroup>
-                        <Label for="location"> Type of Event: </Label>
+                        <Label> Type of Event: </Label>
                             <Input
                                 type="text"
                                 name="eventType"
@@ -101,14 +97,14 @@ class GetAQuoteForm extends Component {
 
                     <Row>
                         <Col>
-                            <Label for="numAttendees"> Guest Count: </Label>
+                            <Label> Guest Count: </Label>
                         </Col>
                         <Col>
                             <FormGroup>
                                 <Input 
                                     style={styles.inputFieldMaxWidth}
                                     type="select"
-                                    name="numGuests"
+                                    name="guestCount"
                                     onChange={this.handleChange} 
                                 >
                                     <option>0-50</option>
@@ -123,14 +119,14 @@ class GetAQuoteForm extends Component {
 
                     <Row>
                         <Col>
-                            <Label for="bar"> Type of Bar: </Label>
+                            <Label> Type of Bar: </Label>
                         </Col>
                         <Col>
                             <FormGroup>
                                 <Input 
-                                    style={styles.barTypeWidth}
+                                    style={styles.inputFieldMaxWidth}
                                     type="select"
-                                    name="bar"
+                                    name="barType"
                                     onChange={this.handleChange} 
                                 >
                                     <option>Espresso</option>
@@ -143,9 +139,9 @@ class GetAQuoteForm extends Component {
 
                     <Row>
                         <Col>
-                            <Label for="date">Date: </Label>
+                            <Label>Date: </Label>
                         </Col>
-                        <Col>
+                        {/* <Col>
                             <FormGroup>
                                 <Input
                                     type="date"
@@ -153,7 +149,7 @@ class GetAQuoteForm extends Component {
                                     placeholder="date"
                                 />
                             </FormGroup>
-                        </Col>
+                        </Col> */}
                     </Row>
                     
                     <Row form >
@@ -207,7 +203,7 @@ class GetAQuoteForm extends Component {
                                 <Input 
                                     style={styles.inputFieldMaxWidth}
                                     type="select" 
-                                    name="startTime"
+                                    name="endTime"
                                     onChange={this.handleChange} 
                                 >
                                     <option></option>
@@ -231,7 +227,7 @@ class GetAQuoteForm extends Component {
                                 <Input
                                     style={styles.inputAmPm} 
                                     type="select"
-                                    name="startTimeAmPm"
+                                    name="endTimeAmPm"
                                     onChange={this.handleChange} 
                                 >
                                     <option>AM</option>
@@ -242,10 +238,10 @@ class GetAQuoteForm extends Component {
                     </Row>
 
                     <FormGroup>
-                        <Label for="message"> Comments: </Label>
+                        <Label> Comments: </Label>
                         <Input
                             type="textarea"
-                            name="message"
+                            name="comments"
                             onChange={this.handleChange} />
                     </FormGroup>
 
