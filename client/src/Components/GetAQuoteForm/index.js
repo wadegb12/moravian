@@ -1,19 +1,26 @@
 import React, {Component} from 'react'
-import { Col, Row, Form, FormGroup, Input, Label, Button} from 'reactstrap'
+import { Col, Row, Form, FormGroup, Input, Label} from 'reactstrap'
+import  Button  from '@material-ui/core/Button'
 import axios from 'axios'
 
 const styles = {
     formContainer: {
         padding: '20px',
-        maxWidth: '600px'
+        maxWidth: '600px',
+        margin: 'auto'
     },
     inputFieldMaxWidth: {
         maxWidth: '120px'
     },
     inputAmPm: {
         maxWidth: '75px'
-    }
-}
+    },
+    button: {
+        borderWidth: '2px',
+    },
+    
+};
+
 class GetAQuoteForm extends Component {
     constructor() {
         super()
@@ -245,7 +252,9 @@ class GetAQuoteForm extends Component {
                             onChange={this.handleChange} />
                     </FormGroup>
 
-                    <Button> Submit </Button>
+                    <Button variant="outlined" style={styles.button}>
+                        Submit
+                    </Button>
                     
                 </Form>
             </div>
