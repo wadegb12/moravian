@@ -3,7 +3,6 @@ import { Col, Row, Form, FormGroup, Input, Label} from 'reactstrap'
 import Button  from '@material-ui/core/Button'
 import axios from 'axios'
 import Media from "react-media";
-import './getAQuoteForm.css'
 
 const styles = {
     formContainer: {
