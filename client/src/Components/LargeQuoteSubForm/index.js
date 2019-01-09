@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const styles = {
     inputFieldMaxWidth: {
-        maxWidth: '120px',
+        maxWidth: '130px',
         background: '#fafafa'
     },
 };
