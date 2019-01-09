@@ -1,11 +1,12 @@
 import React from 'react'
 
-import { Page, GetAQuoteForm } from '../../Components'
+import { Page } from '../../Components'
+import QuoteForm from '../../Components/QuoteForm/QuoteForm'
 
 const AboutUs = (props) => {
     return ( 
         <Page history={props.history}>
-           <GetAQuoteForm />
+           <QuoteForm />
         </Page>
     )
 }
