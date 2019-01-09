@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import { Col, Row, Form, FormGroup, Input, Label} from 'reactstrap'
-import Button  from '@material-ui/core/Button'
+import { Button } from 'reactstrap'
 import axios from 'axios'
 import Media from "react-media";
+import SmallQuoteSubForm from "../SmallQuoteSubForm"
+import LargeQuoteSubForm from "../LargeQuoteSubForm"
 
 const styles = {
     formContainer: {
@@ -10,33 +12,9 @@ const styles = {
         maxWidth: '600px',
         margin: 'auto'
     },
-    smallInputFieldMaxWidth: {
-        marginLeft: '10px',
-        maxWidth: '120px',
-        background: '#fafafa'
-    },
-    inputFieldMaxWidth: {
-        maxWidth: '120px',
-        background: '#fafafa'
-    },
-    inputAmPm: {
-        maxWidth: '75px',
-        float: 'left',
-        background: '#fafafa'
-    },
-    largeInputAmPm: {
-        marginLeft: '-40px',
-        maxWidth: '75px',
-        float: 'left',
-        background: '#fafafa'
-    },
-    button: {
-        borderWidth: '2px',
-    },
     grayBackground: {
         background: '#fafafa'
     }
-    
 };
 
 class GetAQuoteForm extends Component {
@@ -125,220 +103,13 @@ class GetAQuoteForm extends Component {
                                 onChange={this.handleChange} />
                     </FormGroup>
 
-                    <Row>
-                        <Col>
-                            <Label> Guest Count: </Label>
-                        </Col>
-                        <Media query="(max-width: 599px)">
-                            <Col>
-                                <FormGroup>
-                                    <Input 
-                                        style={styles.smallInputFieldMaxWidth}
-                                        type="select"
-                                        name="guestCount"
-                                        onChange={this.handleChange} 
-                                    >
-                                        <option>0-50</option>
-                                        <option>50-100</option>
-                                        <option>100-150</option>
-                                        <option>150-200</option>
-                                        <option>200+</option> 
-                                    </Input>
-                                </FormGroup>
-                            </Col>
-                        </Media>
-                        <Media query="(min-width: 600px)">
-                            <Col>
-                                <FormGroup>
-                                    <Input 
-                                        style={styles.inputFieldMaxWidth}
-                                        type="select"
-                                        name="guestCount"
-                                        onChange={this.handleChange} 
-                                    >
-                                        <option>0-50</option>
-                                        <option>50-100</option>
-                                        <option>100-150</option>
-                                        <option>150-200</option>
-                                        <option>200+</option> 
-                                    </Input>
-                                </FormGroup>
-                            </Col>
-                        </Media>
-                    </Row>
+                    <Media query="(max-width: 599px)">
+                        <SmallQuoteSubForm/>
+                    </Media>
 
-                    <Row>
-                        <Col>
-                            <Label> Type of Bar: </Label>
-                        </Col>
-                        <Media query="(max-width: 599px)">
-                            <Col>
-                                <FormGroup>
-                                    <Input 
-                                        style={styles.smallInputFieldMaxWidth}
-                                        type="select"
-                                        name="barType"
-                                        onChange={this.handleChange} 
-                                    >
-                                        <option>Espresso</option>
-                                        <option>Pour Over</option>
-                                        <option>Both</option>
-                                    </Input>
-                                </FormGroup>
-                            </Col>
-                        </Media>
-                        <Media query="(min-width: 600px)">
-                            <Col>
-                                <FormGroup>
-                                    <Input 
-                                        style={styles.inputFieldMaxWidth}
-                                        type="select"
-                                        name="barType"
-                                        onChange={this.handleChange} 
-                                    >
-                                        <option>Espresso</option>
-                                        <option>Pour Over</option>
-                                        <option>Both</option>
-                                    </Input>
-                                </FormGroup>
-                            </Col>
-                        </Media>
-                    </Row>
-
-                    <Row>
-                        <Col>
-                            <Label>Date: </Label>
-                        </Col>
-                        {/* <Col>
-                            <FormGroup>
-                                <Input
-                                    type="date"
-                                    name="date"
-                                    placeholder="date"
-                                />
-                            </FormGroup>
-                        </Col> */}
-                    </Row>
-                    
-                    <Row form >
-                        <Col>
-                            <Label > Start Time: </Label>
-                        </Col>
-                        <Col>
-                            <FormGroup inline>
-                                <Input 
-                                    style={styles.inputFieldMaxWidth}
-                                    type="select" 
-                                    name="startTime"
-                                    onChange={this.handleChange} 
-                                >
-                                    <option></option>
-                                    <option>1:00</option>
-                                    <option>2:00</option>
-                                    <option>3:00</option>
-                                    <option>4:00</option>
-                                    <option>5:00</option>
-                                    <option>6:00</option>
-                                    <option>7:00</option>
-                                    <option>8:00</option>
-                                    <option>9:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                </Input>
-                            </FormGroup>
-                        </Col>
-                        <Media query="(max-width: 599px)">
-                            <Col>
-                                <FormGroup inline>
-                                    <Input
-                                        style={styles.inputAmPm} 
-                                        type="select"
-                                        name="startTimeAmPm"
-                                        onChange={this.handleChange} 
-                                    >
-                                        <option>AM</option>
-                                        <option>PM</option>
-                                    </Input>
-                                </FormGroup>
-                            </Col>
-                        </Media>
-                        <Media query="(min-width: 600px)">
-                            <Col>
-                                <FormGroup inline>
-                                    <Input
-                                        style={styles.largeInputAmPm} 
-                                        type="select"
-                                        name="startTimeAmPm"
-                                        onChange={this.handleChange} 
-                                    >
-                                        <option>AM</option>
-                                        <option>PM</option>
-                                    </Input>
-                                </FormGroup>
-                            </Col>
-                        </Media>
-                    </Row>
-
-                    <Row form > 
-                        <Col >
-                            <Label> End Time: </Label>
-                        </Col>
-                        <Col>
-                            <FormGroup inline>
-                                <Input 
-                                    style={styles.inputFieldMaxWidth}
-                                    type="select" 
-                                    name="endTime"
-                                    onChange={this.handleChange} 
-                                >
-                                    <option></option>
-                                    <option>1:00</option>
-                                    <option>2:00</option>
-                                    <option>3:00</option>
-                                    <option>4:00</option>
-                                    <option>5:00</option>
-                                    <option>6:00</option>
-                                    <option>7:00</option>
-                                    <option>8:00</option>
-                                    <option>9:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                </Input>
-                            </FormGroup>
-                        </Col>
-                        <Media query="(max-width: 599px)">
-                            <Col>
-                                <FormGroup inline>
-                                    <Input
-                                        style={styles.inputAmPm} 
-                                        type="select"
-                                        name="startTimeAmPm"
-                                        onChange={this.handleChange} 
-                                    >
-                                        <option>AM</option>
-                                        <option>PM</option>
-                                    </Input>
-                                </FormGroup>
-                            </Col>
-                        </Media>
-                        <Media query="(min-width: 600px)">
-                            <Col>
-                                <FormGroup inline>
-                                    <Input
-                                        style={styles.largeInputAmPm} 
-                                        type="select"
-                                        name="startTimeAmPm"
-                                        onChange={this.handleChange} 
-                                    >
-                                        <option>AM</option>
-                                        <option>PM</option>
-                                    </Input>
-                                </FormGroup>
-                            </Col>
-                        </Media>
-                    </Row>
+                    <Media query="(min-width: 600px)">
+                        <LargeQuoteSubForm/>
+                    </Media>
 
                     <FormGroup>
                         <Label> Comments: </Label>
@@ -348,10 +119,8 @@ class GetAQuoteForm extends Component {
                             name="comments"
                             onChange={this.handleChange} />
                     </FormGroup>
-
-                    <Button variant="outlined" style={styles.button}>
-                        Submit
-                    </Button>
+                    
+                    <Button> Submit </Button>
                     
                 </Form>
             </div>
