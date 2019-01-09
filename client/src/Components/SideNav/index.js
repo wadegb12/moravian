@@ -33,10 +33,10 @@ const SideNav = ({ classes }) => {
             <Button component={Link} to="/">
                 <Typography className={classes.whiteColor}> Home </Typography>
             </Button>
-            <Divider/>
+            {/* <Divider/>
             <Button component={Link} to="/AboutUs">
                 <Typography className={classes.whiteColor}> About Us </Typography>
-            </Button>
+            </Button> */}
             <Divider/>
             <Button component={Link} to="/GetAQuote">
                 <Typography className={classes.whiteColor}> Get A Quote </Typography>

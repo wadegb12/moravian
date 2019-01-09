@@ -31,7 +31,7 @@ const NavBar = ({ user, history }) => {
             >
                 <img src={logo} width="50" height="50" style={{margin:"10px"}}/>
                 <Tab label="Home" value="/" />
-                <Tab label="About Us" value="/AboutUs" />
+                {/* <Tab label="About Us" value="/AboutUs" /> */}
                 <Tab label="Get A Quote" value="/GetAQuote" />
             </Tabs>
         </AppBar>
