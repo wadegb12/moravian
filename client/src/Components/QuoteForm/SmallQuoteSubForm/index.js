@@ -19,7 +19,7 @@ const styles = {
     }
 };
 
-class SmallGetAQuoteForm extends Component {
+class SmallQuoteSubForm extends Component {
     constructor() {
         super()
 
@@ -194,4 +194,4 @@ class SmallGetAQuoteForm extends Component {
     }
 }
 
-export default SmallGetAQuoteForm
+export default SmallQuoteSubForm
