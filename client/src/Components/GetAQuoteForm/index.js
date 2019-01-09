@@ -10,6 +10,11 @@ const styles = {
         maxWidth: '600px',
         margin: 'auto'
     },
+    smallInputFieldMaxWidth: {
+        marginLeft: '10px',
+        maxWidth: '120px',
+        background: '#fafafa'
+    },
     inputFieldMaxWidth: {
         maxWidth: '120px',
         background: '#fafafa'
@@ -20,7 +25,7 @@ const styles = {
         background: '#fafafa'
     },
     largeInputAmPm: {
-        marginLeft: '-50px',
+        marginLeft: '-40px',
         maxWidth: '75px',
         float: 'left',
         background: '#fafafa'
@@ -124,42 +129,80 @@ class GetAQuoteForm extends Component {
                         <Col>
                             <Label> Guest Count: </Label>
                         </Col>
-                        <Col>
-                            <FormGroup>
-                                <Input 
-                                    style={styles.inputFieldMaxWidth}
-                                    type="select"
-                                    name="guestCount"
-                                    onChange={this.handleChange} 
-                                >
-                                    <option>0-50</option>
-                                    <option>50-100</option>
-                                    <option>100-150</option>
-                                    <option>150-200</option>
-                                    <option>200+</option> 
-                                </Input>
-                            </FormGroup>
-                        </Col>
+                        <Media query="(max-width: 599px)">
+                            <Col>
+                                <FormGroup>
+                                    <Input 
+                                        style={styles.smallInputFieldMaxWidth}
+                                        type="select"
+                                        name="guestCount"
+                                        onChange={this.handleChange} 
+                                    >
+                                        <option>0-50</option>
+                                        <option>50-100</option>
+                                        <option>100-150</option>
+                                        <option>150-200</option>
+                                        <option>200+</option> 
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                        </Media>
+                        <Media query="(min-width: 600px)">
+                            <Col>
+                                <FormGroup>
+                                    <Input 
+                                        style={styles.inputFieldMaxWidth}
+                                        type="select"
+                                        name="guestCount"
+                                        onChange={this.handleChange} 
+                                    >
+                                        <option>0-50</option>
+                                        <option>50-100</option>
+                                        <option>100-150</option>
+                                        <option>150-200</option>
+                                        <option>200+</option> 
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                        </Media>
                     </Row>
 
                     <Row>
                         <Col>
                             <Label> Type of Bar: </Label>
                         </Col>
-                        <Col>
-                            <FormGroup>
-                                <Input 
-                                    style={styles.inputFieldMaxWidth}
-                                    type="select"
-                                    name="barType"
-                                    onChange={this.handleChange} 
-                                >
-                                    <option>Espresso</option>
-                                    <option>Pour Over</option>
-                                    <option>Both</option>
-                                </Input>
-                            </FormGroup>
-                        </Col>
+                        <Media query="(max-width: 599px)">
+                            <Col>
+                                <FormGroup>
+                                    <Input 
+                                        style={styles.smallInputFieldMaxWidth}
+                                        type="select"
+                                        name="barType"
+                                        onChange={this.handleChange} 
+                                    >
+                                        <option>Espresso</option>
+                                        <option>Pour Over</option>
+                                        <option>Both</option>
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                        </Media>
+                        <Media query="(min-width: 600px)">
+                            <Col>
+                                <FormGroup>
+                                    <Input 
+                                        style={styles.inputFieldMaxWidth}
+                                        type="select"
+                                        name="barType"
+                                        onChange={this.handleChange} 
+                                    >
+                                        <option>Espresso</option>
+                                        <option>Pour Over</option>
+                                        <option>Both</option>
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                        </Media>
                     </Row>
 
                     <Row>
