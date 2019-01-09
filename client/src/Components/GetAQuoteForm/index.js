@@ -3,6 +3,7 @@ import { Col, Row, Form, FormGroup, Input, Label} from 'reactstrap'
 import Button  from '@material-ui/core/Button'
 import axios from 'axios'
 import Media from "react-media";
+import './getAQuoteForm.css'
 
 const styles = {
     formContainer: {
@@ -11,20 +12,26 @@ const styles = {
         margin: 'auto'
     },
     inputFieldMaxWidth: {
-        maxWidth: '120px'
+        maxWidth: '120px',
+        background: '#fafafa'
     },
     inputAmPm: {
         maxWidth: '75px',
-        float: 'left'
+        float: 'left',
+        background: '#fafafa'
     },
     largeInputAmPm: {
         marginLeft: '-50px',
         maxWidth: '75px',
-        float: 'left'
+        float: 'left',
+        background: '#fafafa'
     },
     button: {
         borderWidth: '2px',
     },
+    grayBackground: {
+        background: '#fafafa'
+    }
     
 };
 
@@ -68,6 +75,7 @@ class GetAQuoteForm extends Component {
                         <Col>
                             <FormGroup inline >
                                 <Input
+                                    style={styles.grayBackground}
                                     type="text"
                                     name="firstName"
                                     placeholder="First"
@@ -77,6 +85,7 @@ class GetAQuoteForm extends Component {
                         <Col>
                             <FormGroup inline>
                                 <Input
+                                    style={styles.grayBackground}
                                     type="text"
                                     name="lastName"
                                     placeholder="Last"
@@ -88,6 +97,7 @@ class GetAQuoteForm extends Component {
                     <FormGroup>
                         <Label> Email: </Label>
                             <Input
+                                style={styles.grayBackground}
                                 type="email"
                                 name="email"
                                 onChange={this.handleChange} />
@@ -96,6 +106,7 @@ class GetAQuoteForm extends Component {
                     <FormGroup>
                         <Label> Location: </Label>
                             <Input
+                                style={styles.grayBackground}
                                 type="text"
                                 name="location"
                                 onChange={this.handleChange} />
@@ -104,6 +115,7 @@ class GetAQuoteForm extends Component {
                     <FormGroup>
                         <Label> Type of Event: </Label>
                             <Input
+                                style={styles.grayBackground}
                                 type="text"
                                 name="eventType"
                                 onChange={this.handleChange} />
@@ -289,6 +301,7 @@ class GetAQuoteForm extends Component {
                     <FormGroup>
                         <Label> Comments: </Label>
                         <Input
+                            style={styles.grayBackground}
                             type="textarea"
                             name="comments"
                             onChange={this.handleChange} />
