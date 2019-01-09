@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import { Col, Row, Form, FormGroup, Input, Label} from 'reactstrap'
-import  Button  from '@material-ui/core/Button'
+import Button  from '@material-ui/core/Button'
 import axios from 'axios'
+import Media from "react-media";
 
 const styles = {
     formContainer: {
@@ -13,7 +14,13 @@ const styles = {
         maxWidth: '120px'
     },
     inputAmPm: {
-        maxWidth: '75px'
+        maxWidth: '75px',
+        float: 'left'
+    },
+    largeInputAmPm: {
+        marginLeft: '-50px',
+        maxWidth: '75px',
+        float: 'left'
     },
     button: {
         borderWidth: '2px',
@@ -187,22 +194,40 @@ class GetAQuoteForm extends Component {
                                 </Input>
                             </FormGroup>
                         </Col>
-                        <Col>
-                            <FormGroup inline>
-                                <Input
-                                    style={styles.inputAmPm} 
-                                    type="select"
-                                    name="startTimeAmPm"
-                                    onChange={this.handleChange} 
-                                >
-                                    <option>AM</option>
-                                    <option>PM</option>
-                                </Input>
-                            </FormGroup>
-                        </Col>
+                        <Media query="(max-width: 599px)">
+                            <Col>
+                                <FormGroup inline>
+                                    <Input
+                                        style={styles.inputAmPm} 
+                                        type="select"
+                                        name="startTimeAmPm"
+                                        onChange={this.handleChange} 
+                                    >
+                                        <option>AM</option>
+                                        <option>PM</option>
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                        </Media>
+                        <Media query="(min-width: 600px)">
+                            <Col>
+                                <FormGroup inline>
+                                    <Input
+                                        style={styles.largeInputAmPm} 
+                                        type="select"
+                                        name="startTimeAmPm"
+                                        onChange={this.handleChange} 
+                                    >
+                                        <option>AM</option>
+                                        <option>PM</option>
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                        </Media>
                     </Row>
+
                     <Row form > 
-                        <Col>
+                        <Col >
                             <Label> End Time: </Label>
                         </Col>
                         <Col>
@@ -229,19 +254,36 @@ class GetAQuoteForm extends Component {
                                 </Input>
                             </FormGroup>
                         </Col>
-                        <Col>
-                            <FormGroup inline>
-                                <Input
-                                    style={styles.inputAmPm} 
-                                    type="select"
-                                    name="endTimeAmPm"
-                                    onChange={this.handleChange} 
-                                >
-                                    <option>AM</option>
-                                    <option>PM</option>
-                                </Input>
-                            </FormGroup>
-                        </Col>
+                        <Media query="(max-width: 599px)">
+                            <Col>
+                                <FormGroup inline>
+                                    <Input
+                                        style={styles.inputAmPm} 
+                                        type="select"
+                                        name="startTimeAmPm"
+                                        onChange={this.handleChange} 
+                                    >
+                                        <option>AM</option>
+                                        <option>PM</option>
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                        </Media>
+                        <Media query="(min-width: 600px)">
+                            <Col>
+                                <FormGroup inline>
+                                    <Input
+                                        style={styles.largeInputAmPm} 
+                                        type="select"
+                                        name="startTimeAmPm"
+                                        onChange={this.handleChange} 
+                                    >
+                                        <option>AM</option>
+                                        <option>PM</option>
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                        </Media>
                     </Row>
 
                     <FormGroup>
