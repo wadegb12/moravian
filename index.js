@@ -25,30 +25,23 @@ app.post('/api/form', (req, res) => {
         `
 
         let transporter = nodemailer.createTransport({
-            host: 'smtp.ethereal.email',
-            port: 587,
+            service: 'gmail',
             auth: {
-                user: 'hsrre3sq66yjelys@ethereal.email',
-                pass: 'Fgb4qSgjJHdRGvBSEk'
-            }
+                user: 'wade.beall.dev@gmail.com',
+                pass: 'bc74bf72273b60760749431836b3f6e7' //salt: wade
+              }
         })
 
         let mailOptions = {
-            from: 'test@testaccount.com',
-            to: 'hsrre3sq66yjelys@ethereal.email',
-            replyto: 'test@testaccount.com',
+            to: 'wade.beall.dev@gmail.com',
             subject: 'Quote Requested',
-            text: req.body.message,
             html: htmlEmail
         }
 
         transporter.sendMail(mailOptions, (err, info) => {
             if(err) {
-                return console.log(err)
+                // write to log
             }
-
-            console.log('Message sent: %s', info.message)
-            console.logt('Message URL: %s', nodemailer.getTestMessageUrl(info))
         })
     })
 })
@@ -56,5 +49,4 @@ app.post('/api/form', (req, res) => {
 const PORT = process.env.PORT || 3001
 
 app.listen(PORT, () => {
-    console.log('Server listening on port ${PORT}')
 })
