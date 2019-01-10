@@ -26,6 +26,9 @@ const styles = {
     },
     labelMaxWidth: {
         maxWidth: '110px'
+    },
+    quoteText: {
+        fontSize: '24px'
     }
 };
 
@@ -63,6 +66,9 @@ class QuoteForm extends Component {
         return ( 
             <div style={styles.formContainer}>
                 <Form onSubmit={this.handleSubmit}>
+                    <div style={styles.quoteText} align= "center">
+                        LET US CATER YOUR EVENT
+                    </div>
 
                     <Row form >
                         <Label sm={12}> Name: </Label>
@@ -90,11 +96,11 @@ class QuoteForm extends Component {
                 
                     <FormGroup >
                         <Label> Email: </Label>
-                            <Input
-                                style={styles.grayBackground}
-                                type="email"
-                                name="email"
-                                onChange={this.handleChange} />
+                        <Input
+                            style={styles.grayBackground}
+                            type="email"
+                            name="email"
+                            onChange={this.handleChange} />
                     </FormGroup>
 
                     <FormGroup >
@@ -411,7 +417,7 @@ class QuoteForm extends Component {
                             onChange={this.handleChange} />
                     </FormGroup>
                     
-                    <Button> Submit </Button>
+                    <Button > Submit </Button>
                     
                 </Form>
             </div>
