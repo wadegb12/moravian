@@ -23,12 +23,24 @@ const styles = ({
         position: 'relative',
         maxWidth: '100%',
         maxHeight: '100vh'
+    },  
+    largeImageContainer: {
+        width: '50%',
+        background: "#323031"
+    },
+    image: {
+        padding: '20px',
+        width: '100%'
+    },
+    flex: {
+        display: 'flex'
     },
     smallScreenImageSize: {
-        maxWidth: '100%',
+        padding: '20px',
+        width: '100%',
     },
-    imageSize: {
-        maxWidth: '50%',
+    background: {
+        background: "#323031"
     },
     getAQuoteContainer: {
         background: "#323031",
@@ -38,7 +50,7 @@ const styles = ({
         font: "verlag",
         fontSize: "32",
         color: "#ffffff"
-    }
+    },
   });
 
 const Landing = ({ history, classes }) => {
@@ -60,17 +72,23 @@ const Landing = ({ history, classes }) => {
                     Based in Oklahoma City, OK
                 </Typography>
             </div> */}
-            <Media query="(max-width: 599px)">
-                <div align="center" >
-                    <img src={pouringPhoto} className={classes.smallScreenImageSize}/>
-                    <img src={coffeeArtPhoto} className={classes.smallScreenImageSize}/>
+            
+            <Media query="(max-width: 669px)">
+                <div align="center" className={classes.background}>
+                    <img src={pouringPhoto} className={classes.image}/>
+                    <img src={coffeeArtPhoto} className={classes.image}/>
                 </div>
             </Media>
-            <Media query="(min-width: 600px)">
-                <div  align="center" >
-                    <img src={pouringPhoto} className={classes.imageSize}/>
-                    <img src={coffeeArtPhoto} className={classes.imageSize}/>
+            <Media query="(min-width: 670px)">
+                <div className={classes.flex}>
+                    <div className={classes.largeImageContainer}>
+                        <img src={pouringPhoto} className={classes.image}/>
+                    </div>
+                    <div className={classes.largeImageContainer}>
+                    <img src={coffeeArtPhoto} className={classes.image}/>
+                    </div>
                 </div>
+                
             </Media>
         </Page>
     )
@@ -81,3 +99,4 @@ Landing.propTypes = {
 };
 
 export default withStyles(styles)(Landing);
+
