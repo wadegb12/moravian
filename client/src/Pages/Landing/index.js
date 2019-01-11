@@ -75,17 +75,17 @@ const Landing = ({ history, classes }) => {
             
             <Media query="(max-width: 669px)">
                 <div align="center" className={classes.background}>
-                    <img src={pouringPhoto} className={classes.image}/>
-                    <img src={coffeeArtPhoto} className={classes.image}/>
+                    <img src={pouringPhoto} alt="" className={classes.image}/>
+                    <img src={coffeeArtPhoto} alt="" className={classes.image}/>
                 </div>
             </Media>
             <Media query="(min-width: 670px)">
                 <div className={classes.flex}>
                     <div className={classes.largeImageContainer}>
-                        <img src={pouringPhoto} className={classes.image}/>
+                        <img src={pouringPhoto} alt="" className={classes.image}/>
                     </div>
                     <div className={classes.largeImageContainer}>
-                    <img src={coffeeArtPhoto} className={classes.image}/>
+                    <img src={coffeeArtPhoto} alt="" className={classes.image}/>
                     </div>
                 </div>
                 

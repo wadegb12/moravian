@@ -27,10 +27,10 @@ const Footer = ({classes }) => {
             </Typography>
             <div>
                 <a href="https://www.instagram.com/moraviancoffee/">
-                    <img src={instagramLogo} className={classes.imageSize} style={{margin:"0 10px 0 0"}}/>
+                    <img src={instagramLogo} alt="" className={classes.imageSize} style={{margin:"0 10px 0 0"}}/>
                 </a>
                 <a href="https://www.facebook.com/MoravianCoffee/">
-                    <img src={facebookLogo} className={classes.imageSize}/>
+                    <img src={facebookLogo} alt="" className={classes.imageSize}/>
                 </a>
             </div>
         </div>

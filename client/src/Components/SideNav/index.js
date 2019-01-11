@@ -28,7 +28,7 @@ const SideNav = ({ classes }) => {
             style={styles.root}
         >   
             <div align="center" style={{margin:"10px"}}>
-                <img src={logo} width="144" height="144" />
+                <img src={logo} alt="" width="144" height="144" />
             </div>
             <Button component={Link} to="/">
                 <Typography className={classes.whiteColor}> Home </Typography>

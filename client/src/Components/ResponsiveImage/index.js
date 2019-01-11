@@ -5,6 +5,7 @@ const ResponsiveImage = ({ src, width, paddingBottom, containerClass, imgClass }
     <div style={{ paddingBottom: paddingBottom + '%' }} />
       <img
         src={src}
+        alt=""
         className={imgClass}
       />
     </div>

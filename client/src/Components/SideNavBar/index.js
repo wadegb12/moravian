@@ -60,7 +60,7 @@ class SideNavBar extends React.Component {
                             <MenuIcon style ={styles.iconColor}/>
                         </Button>
 
-                        <img src={logo} width="50" height="50" style={styles.logo}/>
+                        <img src={logo} alt="" width="50" height="50" style={styles.logo}/>
                     </div>
                 </Sidebar>
             </AppBar>
