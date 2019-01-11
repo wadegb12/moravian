@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Col, Row, Form, FormGroup, Input, Label} from 'reactstrap'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap'
+import { Button, Modal, ModalHeader} from 'reactstrap'
 import axios from 'axios'
 import Media from "react-media";
 import { Link } from 'react-router-dom'
