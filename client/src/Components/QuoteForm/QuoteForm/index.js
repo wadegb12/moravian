@@ -74,7 +74,7 @@ class QuoteForm extends Component {
             // date != "" && 
             startTime !== "" && endTime !== "") 
         {
-            const form = await axios.post('/api/form', {
+            await axios.post('/api/form', {
                 firstName, lastName, email, location, eventType, guestCount, barType, date, 
                 startTime, startTimeAmPm, endTime, endTimeAmPm, comments
             })
