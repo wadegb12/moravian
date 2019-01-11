@@ -9,9 +9,6 @@ import ResponsiveImage from './ResponsiveImage';
 import SideNavBar from './SideNavBar';
 import SideNav from './SideNav';
 import QuoteForm from './QuoteForm/QuoteForm';
-import SmallQuoteSubForm from './QuoteForm/SmallQuoteSubForm';
-import LargeQuoteSubForm from './QuoteForm/LargeQuoteSubForm';
-import QuoteModal from './QuoteModal';
 
 export {
     Loading,
@@ -25,7 +22,4 @@ export {
     SideNavBar,
     SideNav,
     QuoteForm,
-    SmallQuoteSubForm,
-    LargeQuoteSubForm,
-    QuoteModal,
 }
