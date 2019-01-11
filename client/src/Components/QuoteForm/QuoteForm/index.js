@@ -70,9 +70,9 @@ class QuoteForm extends Component {
         const { firstName, lastName, email, location, eventType, guestCount, barType, date, 
             startTime, startTimeAmPm, endTime, endTimeAmPm, comments } = this.state
 
-        if(firstName != "" && lastName != "" && email != "" && location != "" && eventType != "" && 
+        if(firstName !== "" && lastName !== "" && email !== "" && location !== "" && eventType !== "" && 
             // date != "" && 
-            startTime != "" && endTime != "") 
+            startTime !== "" && endTime !== "") 
         {
             const form = await axios.post('/api/form', {
                 firstName, lastName, email, location, eventType, guestCount, barType, date, 
