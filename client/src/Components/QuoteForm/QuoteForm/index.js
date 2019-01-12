@@ -322,6 +322,7 @@ class QuoteForm extends Component {
                                                 type="date"
                                                 name="date"
                                                 placeholder="date"
+                                                onChange={this.handleChange} 
                                             />
                                         </FormGroup>
                                     </Col>
