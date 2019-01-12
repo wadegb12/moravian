@@ -16,10 +16,8 @@ const Landing = ({ history, classes, props }) => {
 
     return (
         <Page history={history}>
-            <img src={photo} alt="" className={classes.responsiveImg} /> 
-            
-            <div align="center">
-                <div  className={classes.quoteTextContainer}>
+            <Media query="(max-width: 499px)">
+                <div align="center" className={classes.background}>
                     <Typography className={classes.infoText}> We are a coffee catering company </Typography>
                     <div className={classes.buttonPadding}>
                         <Button component={Link} to="/GetAQuote" variant="outlined" className={classes.button}>
@@ -28,8 +26,38 @@ const Landing = ({ history, classes, props }) => {
                     </div>
                     <Typography className={classes.infoText}> Based in Oklahoma City, OK</Typography>
                 </div>
-            </div>
-            
+            </Media>
+
+            <img src={photo} alt="" className={classes.responsiveImg} /> 
+
+            {/* <Media query="(min-width: 500px)">
+                <div align="center">
+                    <div  className={classes.quoteTextContainer}>
+                        <Typography className={classes.infoText}> We are a coffee catering company </Typography>
+                        <div className={classes.buttonPadding}>
+                            <Button component={Link} to="/GetAQuote" variant="outlined" className={classes.button}>
+                                <Typography  className ={classes.getQuoteText}> GET A QUOTE </Typography>
+                            </Button>
+                        </div>
+                        <Typography className={classes.infoText}> Based in Oklahoma City, OK</Typography>
+                    </div>
+                </div>
+            </Media> */}
+
+            <Media query="(min-width: 850px)">
+                <div align="center">
+                    <div  className={classes.quoteTextContainer}>
+                        <Typography className={classes.coffeeShopText}> We are a coffee catering company </Typography>
+                        <div className={classes.buttonPadding}>
+                            <Button component={Link} to="/GetAQuote" variant="outlined" className={classes.button}>
+                                <Typography  className ={classes.getQuoteText}> GET A QUOTE </Typography>
+                            </Button>
+                        </div>
+                        <Typography className={classes.basedText}> Based in Oklahoma City, OK</Typography>
+                    </div>
+                </div>
+            </Media>
+
             <Media query="(max-width: 769px)">
                 <div align="center" className={classes.background}>
                     <img src={pouringPhoto} alt="" className={classes.image}/>

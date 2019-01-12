@@ -28,6 +28,15 @@ const styles = ({
         fontSize:'20px',
         padding: '5px'
     },
+    basedText: {
+        fontSize:'20px',
+        paddingTop: '100px',
+        paddingBottom: '10px'
+    },
+    coffeeShopText: {
+        fontSize: '20px',
+        paddingTop: '30px'
+    },
     getQuoteText: {
         fontSize: '26px',
         padding: '5px'
