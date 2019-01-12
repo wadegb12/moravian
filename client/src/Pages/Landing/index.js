@@ -17,15 +17,18 @@ const Landing = ({ history, classes, props }) => {
     return (
         <Page history={history}>
             <img src={photo} alt="" className={classes.responsiveImg} /> 
-                <div className={classes.quoteTextContainer}>
-                    <div align="center">
+            
+            <div align="center">
+                <div  className={classes.quoteTextContainer}>
+                    <Typography className={classes.infoText}> We are a coffee catering company </Typography>
+                    <div className={classes.buttonPadding}>
                         <Button component={Link} to="/GetAQuote" variant="outlined" className={classes.button}>
-                            <Typography  >
-                                LET US GIVE YOU A QUOTE
-                            </Typography>
+                            <Typography  className ={classes.getQuoteText}> GET A QUOTE </Typography>
                         </Button>
                     </div>
+                    <Typography className={classes.infoText}> Based in Oklahoma City, OK</Typography>
                 </div>
+            </div>
             
             <Media query="(max-width: 769px)">
                 <div align="center" className={classes.background}>

@@ -1,4 +1,4 @@
-const styles = theme=> ({
+const styles = ({
     responsiveImg: {
         width:'100%',
     },
@@ -16,17 +16,24 @@ const styles = theme=> ({
     background: {
         background: "#323031"
     },
-    quoteText: {
-        padding:'10px',
-        border: '2px solid',
-    },
     quoteTextContainer: {
         position: 'absolute',
-        top: '25%',
+        top: '10%',
         width: '100%'
     },
     button: {
-        border: '2px solid'
+        border: '2px solid',
+    },
+    infoText: {
+        fontSize:'20px',
+        padding: '5px'
+    },
+    getQuoteText: {
+        fontSize: '26px',
+        padding: '5px'
+    },
+    buttonPadding: {
+        padding: '10px'
     }
 });
 
