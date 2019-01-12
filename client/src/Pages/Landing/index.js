@@ -9,6 +9,8 @@ import coffeeArtPhoto from '../../Assets/coffeeArt.jpg';
 import Media from "react-media";
 import styles from './styles'
 import { Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom'
+import Button from '@material-ui/core/Button';
 
 const Landing = ({ history, classes, props }) => {
 
@@ -16,9 +18,13 @@ const Landing = ({ history, classes, props }) => {
         <Page history={history}>
             <img src={photo} alt="" className={classes.responsiveImg} /> 
                 <div className={classes.quoteTextContainer}>
-                    <Typography align="center" >
-                        LET US GIVE YOU A QUOTE
-                    </Typography>
+                    <div align="center">
+                        <Button component={Link} to="/GetAQuote" variant="outlined" className={classes.button}>
+                            <Typography  >
+                                LET US GIVE YOU A QUOTE
+                            </Typography>
+                        </Button>
+                    </div>
                 </div>
             
             <Media query="(max-width: 769px)">

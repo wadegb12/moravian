@@ -25,6 +25,9 @@ const styles = theme=> ({
         top: '25%',
         width: '100%'
     },
+    button: {
+        border: '2px solid'
+    }
 });
 
 export default styles;
