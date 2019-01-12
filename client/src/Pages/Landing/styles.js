@@ -26,18 +26,16 @@ const styles = theme=> ({
         background: "#323031"
     },
     quoteText: {
-        positon: 'relative'
+        top: '25%',
+        position: 'absolute',
+        padding:'10px',
+        border: '2px solid',
+        minWidth:'250px',
+        textAlign: 'center'
     },
-
-
-    getAQuoteContainer: {
-        background: "#323031",
-        padding: '32px'
-    },
-    getAQuoteText: {
-        font: "verlag",
-        fontSize: "32",
-        color: "#ffffff"
+    quoteTextContainer: {
+        right: '40%',
+        left: '40%'
     },
 });
 
