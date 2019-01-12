@@ -8,21 +8,18 @@ import pouringPhoto from '../../Assets/pouringCoffee.jpg';
 import coffeeArtPhoto from '../../Assets/coffeeArt.jpg';
 import Media from "react-media";
 import styles from './styles'
-// import { Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 
 const Landing = ({ history, classes, props }) => {
-    // const { state } = props;
 
     return (
         <Page history={history}>
             <img src={photo} alt="" className={classes.responsiveImg} /> 
-            {/* <div >
-                <div align="center" className={classes.quoteTextContainer}>
-                    <Typography className={classes.quoteText}>
+                <div className={classes.quoteTextContainer}>
+                    <Typography align="center" >
                         LET US GIVE YOU A QUOTE
                     </Typography>
                 </div>
-            </div> */}
             
             <Media query="(max-width: 769px)">
                 <div align="center" className={classes.background}>
