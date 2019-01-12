@@ -8,62 +8,29 @@ import pouringPhoto from '../../Assets/pouringCoffee.jpg';
 import coffeeArtPhoto from '../../Assets/coffeeArt.jpg';
 import Media from "react-media";
 import { Typography } from '@material-ui/core';
+import ButtonBase from '@material-ui/core/ButtonBase';
+import styles from './styles'
 
-const styles = ({
-    responsiveImg: {
-      position: 'absolute',
-      left: 0,
-      right: 0,
-      top: 0,
-      bottom: 0,
-      width: '100%',
-      height: '100%'
-    },
-    landingPhotoContainer: {
-        position: 'relative',
-        maxWidth: '100%',
-        maxHeight: '100vh'
-    },  
-    largeImageContainer: {
-        width: '50%',
-        background: "#323031"
-    },
-    image: {
-        padding: '20px',
-        width: '100%'
-    },
-    flex: {
-        display: 'flex'
-    },
-    smallScreenImageSize: {
-        padding: '20px',
-        width: '100%',
-    },
-    background: {
-        background: "#323031"
-    },
-    getAQuoteContainer: {
-        background: "#323031",
-        padding: '32px'
-    },
-    getAQuoteText: {
-        font: "verlag",
-        fontSize: "32",
-        color: "#ffffff"
-    },
-  });
+// const images = [
+//     {
+//       url: '../../Assets/HeaderV2.jpg',
+//       title: 'Breakfast',
+//       width: '40%',
+//     },
+//   ];
 
-const Landing = ({ history, classes }) => {
+const Landing = ({ history, classes, props }) => {
+    // const { state } = props;
+
     return (
         <Page history={history}>
-            
             <ResponsiveImage
                 src={photo}
                 width={100000}
                 paddingBottom={55}
                 containerClass={classes.landingPhotoContainer}
                 imgClass={classes.responsiveImg}
-            />
+            /> 
             {/* <div align= "center"  className={classes.getAQuoteContainer} >
                 <Typography className={classes.getAQuoteText}>
                     Get A Quote
@@ -100,3 +67,38 @@ Landing.propTypes = {
 
 export default withStyles(styles)(Landing);
 
+
+
+
+            // <div className={classes.root}>
+            //     {images.map(image => (
+            //     <ButtonBase
+            //         focusRipple
+            //         key={image.title}
+            //         className={classes.image}
+            //         focusVisibleClassName={classes.focusVisible}
+            //         style={{
+            //             width: image.width,
+            //         }}
+            //     >
+            //         {/* <span
+            //         className={classes.imageSrc}
+            //         style={{
+            //             backgroundImage: `url(${image.url})`,
+            //         }}
+            //         />*/}
+            //         <span className={classes.imageBackdrop} /> 
+            //         <span className={classes.imageButton}>
+            //             <Typography
+            //                 component="span"
+            //                 variant="subtitle1"
+            //                 color="inherit"
+            //                 className={classes.imageTitle}
+            //             >
+            //                 {image.title}
+            //                 <span className={classes.imageMarked} />
+            //             </Typography>
+            //         </span>
+            //     </ButtonBase>
+            //     ))}
+            // </div>
