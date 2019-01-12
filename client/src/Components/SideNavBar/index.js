@@ -14,15 +14,17 @@ const styles = {
         marginLeft: '5%',
     },
     icon: {
+        float: 'left',
         top: '10px'
     },
     iconColor: {
         color: 'white',
     },
     logo: {
-        float: 'right',
-        margin: '10px',
-    }
+        marginTop: '10px',
+        marginBottom: '10px',
+        marginLeft: '-50px'
+    },
 };
 
 class SideNavBar extends React.Component {
@@ -46,12 +48,13 @@ class SideNavBar extends React.Component {
             <AppBar position="static">
                 <div style={styles.sideNavBar}>
                     <div style={styles.sideNavBarWidth}>
-                        <SideNav open={this.state.left} toggleDrawer={this.toggleDrawer}/>
-                        <Button open={this.state.left} onClick={this.toggleDrawer('left', true)} style={styles.icon}>
-                            <MenuIcon style ={styles.iconColor}/>
-                        </Button>
-
-                        <img src={logo} alt="" width="50" height="50" style={styles.logo}/>
+                        <div align="center">
+                            <SideNav open={this.state.left} toggleDrawer={this.toggleDrawer}/>
+                            <Button open={this.state.left} onClick={this.toggleDrawer('left', true)} style={styles.icon}>
+                                <MenuIcon style ={styles.iconColor}/>
+                            </Button>
+                            <img src={logo} alt="" width="50" height="50" style={styles.logo}/>
+                        </div>
                     </div>
                 </div>
             </AppBar>
