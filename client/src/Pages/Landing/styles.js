@@ -2,6 +2,10 @@ const styles = ({
     responsiveImg: {
         width:'100%',
     },
+    vertialImg: {
+        width:'100%',
+        // height: '100vh'
+    },
     largeImageContainer: {
         width: '50%',
         background: "#323031"
