@@ -8,11 +8,12 @@ import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import logo from '../../Assets/moravianLogo.png';
+import Footer from '../Footer'
 
 const styles = {
   list: {
-    
-    width: 250,
+    height: '100%',
+    width: '250',
   },
   fullList: {
     width: 'auto',
@@ -23,6 +24,9 @@ const styles = {
   root:{
     height: '100%',
     background: "#323031",
+  },
+  footer: {
+    bottom: '0'
   }
 };
 
@@ -44,6 +48,9 @@ const TemporaryDrawer = (props) => {
               <Typography className={classes.whiteColor}> Get A Quote </Typography>
           </Button>
         </List>
+        <div className={classes.footer}>
+          <Footer/>
+        </div>
       </div>
     );
 
