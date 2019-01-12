@@ -64,26 +64,3 @@ SideNav.propTypes = {
 
 export default withStyles(styles)(SideNav);
 
-
-
-// const sideList = (
-//   <div className={classes.list}>
-//     <List 
-//     style={styles.root} 
-//     >   
-//       <div align="center" style={{margin:"10px"}}>
-//           <img src={logo} alt="" width="144" height="144" />
-//       </div>
-//       <Button component={Link} to="/">
-//           <Typography className={classes.whiteColor}> Home </Typography>
-//       </Button>
-//       <Divider/>
-//       <Button component={Link} to="/GetAQuote">
-//           <Typography className={classes.whiteColor}> Get A Quote </Typography>
-//       </Button>
-//     </List>
-//     <div className={classes.footer}>
-//       <Footer/>
-//     </div>
-//   </div>
-// );
