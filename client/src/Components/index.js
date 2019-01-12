@@ -5,7 +5,6 @@ import Page from './Page';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import Button from './Button';
-import ResponsiveImage from './ResponsiveImage';
 import SideNavBar from './SideNavBar';
 import SideNav from './SideNav';
 import QuoteForm from './QuoteForm/QuoteForm';
@@ -18,7 +17,6 @@ export {
     NavBar,
     Footer,
     Button,
-    ResponsiveImage,
     SideNavBar,
     SideNav,
     QuoteForm,
