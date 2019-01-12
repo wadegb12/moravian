@@ -9,7 +9,6 @@ import {Loading} from './Components'
 import {
   Landing,
   GetAQuote,
-  AboutUs,
 } from './Pages'
 
 export const UserContext = React.createContext('GUEST')
