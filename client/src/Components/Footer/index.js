@@ -11,8 +11,8 @@ const styles = theme => ({
         maxWidth: '100%',
         paddingTop: '32px',
         paddingBottom: '32px',
-        paddingLeft: '0px',
-        paddingRight: '0px',
+        paddingLeft: '10px',
+        paddingRight: '10px',
     },
     footerTextColor: {
         color: "#DCDCDE"

@@ -12,18 +12,16 @@ import Footer from '../Footer'
 
 const styles = {
   list: {
-    height: '100%',
+    height: '100vh',
     width: '250',
-  },
-  fullList: {
-    width: 'auto',
+    background: "#323031",
   },
   whiteColor: {
       color: "#ffffff"
   },
   root:{
-    height: '100%',
-    background: "#323031",
+    // height: '100%',
+    // background: "#323031",
   },
   footer: {
     bottom: '0'
@@ -36,7 +34,9 @@ const TemporaryDrawer = (props) => {
 
     const sideList = (
       <div className={classes.list}>
-        <List style={styles.root} >   
+        <List 
+        // style={styles.root} 
+        >   
           <div align="center" style={{margin:"10px"}}>
               <img src={logo} alt="" width="144" height="144" />
           </div>
