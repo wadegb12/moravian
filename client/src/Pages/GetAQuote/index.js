@@ -3,7 +3,7 @@ import React from 'react'
 import { Page } from '../../Components'
 import QuoteForm from '../../Components/QuoteForm/QuoteForm'
 
-const AboutUs = (props) => {
+const GetAQuote = (props) => {
     return ( 
         <Page history={props.history}>
            <QuoteForm />
@@ -11,4 +11,4 @@ const AboutUs = (props) => {
     )
 }
 
-export default AboutUs
+export default GetAQuote
