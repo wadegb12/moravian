@@ -11,69 +11,79 @@ import logo from '../../Assets/moravianLogo.png';
 import Footer from '../Footer'
 
 const styles = {
-  list: {
+  sideNav: {
     height: '100vh',
-    width: '250',
+    width: '270px',
     background: "#323031",
   },
   whiteColor: {
       color: "#ffffff"
   },
-  root:{
-    // height: '100%',
-    // background: "#323031",
-  },
   footer: {
-    bottom: '0'
+    position: 'absolute',
+    bottom: '0px'
   }
 };
 
-const TemporaryDrawer = (props) => {
+const SideNav = (props) => {
 
     const { classes } = props;
 
-    const sideList = (
-      <div className={classes.list}>
-        <List 
-        // style={styles.root} 
-        >   
-          <div align="center" style={{margin:"10px"}}>
-              <img src={logo} alt="" width="144" height="144" />
-          </div>
-          <Button component={Link} to="/">
-              <Typography className={classes.whiteColor}> Home </Typography>
-          </Button>
-          <Divider/>
-          <Button component={Link} to="/GetAQuote">
-              <Typography className={classes.whiteColor}> Get A Quote </Typography>
-          </Button>
-        </List>
-        <div className={classes.footer}>
-          <Footer/>
-        </div>
-      </div>
-    );
-
     return (
-      <div>
         <Drawer open={props.open} onClose={props.toggleDrawer('left', false)}>
           <div
-            style={styles.root}
+            style={styles.sideNav}
             tabIndex={0}
             role="button"
             onClick={props.toggleDrawer('left', false)}
             onKeyDown={props.toggleDrawer('left', false)}
           >
-            {sideList}
+            <List>   
+              <div align="center" style={{margin:"10px"}}>
+                  <img src={logo} alt="" width="144" height="144" />
+              </div>
+              <Button component={Link} to="/">
+                  <Typography className={classes.whiteColor}> Home </Typography>
+              </Button>
+              <Divider/>
+              <Button component={Link} to="/GetAQuote">
+                  <Typography className={classes.whiteColor}> Get A Quote </Typography>
+              </Button>
+            </List>
+            <div className={classes.footer}>
+              <Footer/>
+            </div>
           </div>
         </Drawer>
-      </div>
     );
 }
 
-TemporaryDrawer.propTypes = {
+SideNav.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TemporaryDrawer);
+export default withStyles(styles)(SideNav);
 
+
+
+// const sideList = (
+//   <div className={classes.list}>
+//     <List 
+//     style={styles.root} 
+//     >   
+//       <div align="center" style={{margin:"10px"}}>
+//           <img src={logo} alt="" width="144" height="144" />
+//       </div>
+//       <Button component={Link} to="/">
+//           <Typography className={classes.whiteColor}> Home </Typography>
+//       </Button>
+//       <Divider/>
+//       <Button component={Link} to="/GetAQuote">
+//           <Typography className={classes.whiteColor}> Get A Quote </Typography>
+//       </Button>
+//     </List>
+//     <div className={classes.footer}>
+//       <Footer/>
+//     </div>
+//   </div>
+// );
