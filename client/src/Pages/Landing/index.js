@@ -1,6 +1,5 @@
 import React from 'react'
 import { Page } from '../../Components'
-import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Media from "react-media";
 import SmallLandingPhoto from '../../Components/Landing/SmallLandingPage/Photo';
