@@ -3,29 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import instagramLogo from '../../Assets/instagram.png';
 import facebookLogo from '../../Assets/facebookLogo.png';
-
-const styles = theme => ({
-    footer: {
-        backgroundColor: "#323031",
-        padding: theme.spacing.unit * 4,
-        maxWidth: '100%',
-        paddingTop: '32px',
-        paddingBottom: '32px',
-        paddingLeft: '10px',
-        paddingRight: '10px',
-    },
-    footerTextColor: {
-        color: "#DCDCDE"
-    },
-    emailText: {
-        color: "#DCDCDE",
-        paddingTop: '10px'
-    },
-    imageSize: {
-        width: "25px",
-        height: "25px"
-    }
-})
+import styles from './styles';
 
 const Footer = ({classes }) => {
 
