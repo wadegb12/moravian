@@ -15,7 +15,7 @@ const styles = ({
         height: '100%',
         alignItem: 'center'
     },
-    imageItself: {
+    image: {
         height: 'auto',
         width: '100%',
         alignSelf: 'center',
