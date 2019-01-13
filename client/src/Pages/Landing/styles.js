@@ -1,10 +1,26 @@
 const styles = ({
+    imageContainer: {
+        overflow: 'hidden',
+        width: '100%',
+        maxHeight: '90vh'
+    },
+    imageHolder: {
+        display: 'flex',
+        height: '100%',
+        alignItem: 'center'
+    },
+    imageItself: {
+        height: 'auto',
+        width: '100%',
+        alignSelf: 'center',
+    },
     responsiveImg: {
         width:'100%',
     },
     vertialImg: {
-        width:'100%',
-        // height: '100vh'
+        width: '100%',
+        // maxWixdth:'600px',
+        // height: '100vh',
     },
     largeImageContainer: {
         width: '50%',

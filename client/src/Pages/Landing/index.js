@@ -17,8 +17,24 @@ const Landing = ({ history, classes, props }) => {
 
     return (
         <Page history={history}>
-            
-            <Media query="(max-width: 769px)">
+            <Media query="(max-width: 500px)">
+                <div className={classes.imageContainer} >
+                    <div className={classes.imageHolder} >
+                        <img className={classes.imageItself} src={verticalLandingPagePhoto} />
+                    </div>
+                </div>
+            </Media>
+        </Page>
+    )
+}
+
+Landing.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Landing);
+
+{/* <Media query="(max-width: 769px)">
                 <div>
                     <img src={verticalLandingPagePhoto} alt="" className={classes.vertialImg} /> 
                     <div align="center" className={classes.background}>
@@ -39,16 +55,11 @@ const Landing = ({ history, classes, props }) => {
                         </div>
                     </div>
                 </div>
-            </Media>
-        </Page>
-    )
-}
+            </Media>  */}
 
-Landing.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
-export default withStyles(styles)(Landing);
+
+
 
 
 {/* <Media query="(max-width: 499px)">
