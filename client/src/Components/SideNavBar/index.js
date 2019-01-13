@@ -4,28 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/IconButton';
 import logo from '../../Assets/moravianLogo.png';
-
-const styles = {
-    sideNavBar: {
-        background: "#323031",
-    },
-    sideNavBarWidth: {
-        marginRight: '5%',
-        marginLeft: '5%',
-    },
-    icon: {
-        float: 'left',
-        top: '20px'
-    },
-    iconColor: {
-        color: 'white',
-    },
-    logo: {
-        marginTop: '20px',
-        marginBottom: '20px',
-        marginLeft: '-50px'
-    },
-};
+import styles from './styles';
 
 class SideNavBar extends React.Component {
     constructor(props) {
