@@ -13,11 +13,9 @@ const SmallLandingText = ({classes}) => {
             <div className={classes.landingPageText} style={{position: 'absolute'}}>
                 <div align="center">
                     <Typography className={classes.smallInfoText}> We are a coffee catering company </Typography>
-                        <div className={classes.buttonPadding}>
-                            <Button component={Link} to="/GetAQuote" variant="outlined" className={classes.smallButton}>
-                                <Typography  className ={classes.smallGetQuoteText}> GET A QUOTE </Typography>
-                            </Button>
-                        </div>
+                    <Button component={Link} to="/GetAQuote" variant="outlined" className={classes.smallButton}>
+                        <Typography  className ={classes.smallGetQuoteText}> GET A QUOTE </Typography>
+                    </Button>
                     <Typography className={classes.smallInfoText}> Based in Oklahoma City, OK</Typography>
                 </div>
             </div>
