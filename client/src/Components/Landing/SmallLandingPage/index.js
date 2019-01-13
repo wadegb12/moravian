@@ -5,7 +5,7 @@ import verticalLandingPagePhoto from '../../../Assets/verticalLandingPagePhoto.j
 import Media from "react-media";
 import styles from '../styles'
 
-const SmallLandingPage = ({ history, classes, props }) => {
+const SmallLandingPage = ({ classes }) => {
 
     return (
         <div>
