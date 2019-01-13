@@ -8,6 +8,8 @@ import Button from './Button';
 import SideNavBar from './SideNavBar';
 import SideNav from './SideNav';
 import QuoteForm from './QuoteForm/QuoteForm';
+import LargeLandingPage from './Landing/LargeLandingPage';
+import SmallLandingPage from './Landing/SmallLandingPage';
 
 export {
     Loading,
@@ -20,4 +22,6 @@ export {
     SideNavBar,
     SideNav,
     QuoteForm,
+    LargeLandingPage,
+    SmallLandingPage,
 }

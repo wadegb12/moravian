@@ -1,29 +1,22 @@
 import React from 'react'
-import photo from '../../Assets/HeaderV2.jpg';
 import { Page } from '../../Components'
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import pouringPhoto from '../../Assets/pouringCoffee.jpg';
-import coffeeArtPhoto from '../../Assets/coffeeArt.jpg';
-import coffeeOnTable from '../../Assets/coffeeOnTable.jpg';
-import verticalLandingPagePhoto from '../../Assets/verticalLandingPagePhoto.jpg';
 import Media from "react-media";
 import styles from './styles'
-import { Typography } from '@material-ui/core';
-import { Link } from 'react-router-dom'
-import Button from '@material-ui/core/Button';
+import SmallLandingPage from '../../Components/Landing/SmallLandingPage';
+import LargeLandingPage from '../../Components/Landing/LargeLandingPage';
 
 const Landing = ({ history, classes, props }) => {
 
     return (
         <Page history={history}>
-            <Media query="(max-width: 500px)">
-                <div className={classes.imageContainer} >
-                    <div className={classes.imageHolder} >
-                        <img className={classes.imageItself} src={verticalLandingPagePhoto} />
-                    </div>
-                </div>
+            <Media query="(max-width: 805px)"> 
+                <SmallLandingPage/>
             </Media>
+            <Media query="(min-width: 806px) ">
+                <LargeLandingPage/>
+            </Media>  
         </Page>
     )
 }
