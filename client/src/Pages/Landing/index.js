@@ -27,33 +27,6 @@ Landing.propTypes = {
 
 export default withStyles(styles)(Landing);
 
-{/* <Media query="(max-width: 769px)">
-                <div>
-                    <img src={verticalLandingPagePhoto} alt="" className={classes.vertialImg} /> 
-                    <div align="center" className={classes.background}>
-                        <img src={pouringPhoto} alt="" className={classes.image}/>
-                        <img src={coffeeArtPhoto} alt="" className={classes.image}/>
-                    </div>
-                </div>
-            </Media>
-            <Media query="(min-width: 770px)">
-                <div>
-                    <img src={coffeeOnTable} alt="" className={classes.responsiveImg} /> 
-                    <div className={classes.flex}>
-                        <div className={classes.largeImageContainer}>
-                            <img src={pouringPhoto} alt="" className={classes.image}/>
-                        </div>
-                        <div className={classes.largeImageContainer}>
-                            <img src={coffeeArtPhoto} alt="" className={classes.image}/>
-                        </div>
-                    </div>
-                </div>
-            </Media>  */}
-
-
-
-
-
 
 {/* <Media query="(max-width: 499px)">
                 <div align="center" className={classes.background}>
