@@ -15,14 +15,14 @@ const styles = {
     },
     icon: {
         float: 'left',
-        top: '10px'
+        top: '20px'
     },
     iconColor: {
         color: 'white',
     },
     logo: {
-        marginTop: '10px',
-        marginBottom: '10px',
+        marginTop: '20px',
+        marginBottom: '20px',
         marginLeft: '-50px'
     },
 };
