@@ -12,10 +12,10 @@ class Page extends Component {
 
         return (
                 <div className="Page">
-                    <Media query="(max-width: 500px)">
+                    <Media query="(max-width: 805px)">
                         <SideNavBar user={user} history={history} />
                     </Media>
-                    <Media query="(min-width: 501px)">
+                    <Media query="(min-width: 806px)">
                         <NavBar user={user} history={history} />
                     </Media>
                     {children}
