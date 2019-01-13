@@ -9,21 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import logo from '../../Assets/moravianLogo.png';
 import Footer from '../Footer'
-
-const styles = {
-  sideNav: {
-    height: '100vh',
-    width: '270px',
-    background: "#323031",
-  },
-  whiteColor: {
-      color: "#ffffff"
-  },
-  footer: {
-    position: 'absolute',
-    bottom: '0px'
-  }
-};
+import styles from './styles'
 
 const SideNav = (props) => {
 
