@@ -1,4 +1,19 @@
 const styles = ({
+    imageContainer: {
+        overflow: 'hidden',
+        width: '100%',
+        height: '90vh'
+    },
+    imageHolder: {
+        display: 'flex',
+        height: '100%',
+        alignItem: 'center'
+    },
+    image: {
+        height: 'auto',
+        width: '100%',
+        alignSelf: 'center',
+    },
     landingPageText: {
         top: '30%',
         width: '100%'
@@ -16,20 +31,6 @@ const styles = ({
         fontSize: '42px',
         padding: '5px',
         color: '#000000'
-    },
-    smallButton: {
-        border: '2px solid',
-        color: '#BB9B4E'
-    },
-    smallInfoText: {
-        fontSize:'32px',
-        padding: '5px',
-        color: '#BB9B4E'
-    },
-    smallGetQuoteText: {
-        fontSize: '42px',
-        padding: '5px',
-        color: '#BB9B4E'
     },
 });
 

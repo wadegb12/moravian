@@ -1,34 +1,36 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import verticalLandingPagePhoto from '../../../Assets/verticalLandingPagePhoto.jpg';
+import coffeeOnTable from '../../../../Assets/coffeeOnTable.jpg';
 import Media from "react-media";
-import styles from '../styles'
+import styles from '../../largeStyles'
 
-const SmallLandingPage = ({ classes }) => {
+const LargeLandingPhoto = ({ classes }) => {
 
     return (
         <div>
-            <Media query="(max-width: 521px)">
+            <Media query="(max-width: 1065px)">
                 <div className={classes.smallImageContainer} >
                     <div className={classes.imageHolder} >
-                        <img src={verticalLandingPagePhoto} alt="" className={classes.image} />
+                        <img src={coffeeOnTable} alt="" className={classes.image} /> 
                     </div>
                 </div>
-            </Media>
-            <Media query="(min-width: 522px)"> 
+            </Media>  
+            <Media query="(min-width: 1066px)">
                 <div className={classes.imageContainer} >
                     <div className={classes.imageHolder} >
-                        <img src={verticalLandingPagePhoto} alt="" className={classes.image} />
+                        <img src={coffeeOnTable} alt="" className={classes.image} /> 
                     </div>
                 </div>
-            </Media>
+            </Media> 
         </div>
     )
 }
 
-SmallLandingPage.propTypes = {
+LargeLandingPhoto.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SmallLandingPage);
+export default withStyles(styles)(LargeLandingPhoto);
+
+

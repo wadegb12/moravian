@@ -8,8 +8,10 @@ import Button from './Button';
 import SideNavBar from './SideNavBar';
 import SideNav from './SideNav';
 import QuoteForm from './QuoteForm/QuoteForm';
-import LargeLandingPage from './Landing/LargeLandingPage';
-import SmallLandingPage from './Landing/SmallLandingPage';
+import LargeLandingPhoto from './Landing/LargeLandingPage/Photo';
+import LargeLandingText from './Landing/LargeLandingPage/Text';
+import SmallLandingPhoto from './Landing/SmallLandingPage/Photo';
+import SmallLandingText from './Landing/SmallLandingPage/Text';
 
 export {
     Loading,
@@ -22,6 +24,8 @@ export {
     SideNavBar,
     SideNav,
     QuoteForm,
-    LargeLandingPage,
-    SmallLandingPage,
+    LargeLandingPhoto,
+    LargeLandingText,
+    SmallLandingPhoto,
+    SmallLandingText,
 }
