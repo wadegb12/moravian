@@ -43,27 +43,52 @@ const styles = ({
     },
     button: {
         border: '2px solid',
+        color: '#000000'
     },
     infoText: {
-        fontSize:'20px',
-        padding: '5px'
+        fontSize:'32px',
+        padding: '5px',
+        color: '#000000'
     },
     basedText: {
-        fontSize:'20px',
+        fontSize:'32px',
         paddingTop: '100px',
-        paddingBottom: '10px'
+        paddingBottom: '10px',
+        color: '#000000'
     },
     coffeeShopText: {
         fontSize: '20px',
         paddingTop: '30px'
     },
     getQuoteText: {
-        fontSize: '26px',
-        padding: '5px'
+        fontSize: '42px',
+        padding: '5px',
+        color: '#000000'
     },
     buttonPadding: {
         padding: '10px'
-    }
+    },
+    landingPageText: {
+        top: '30%',
+        width: '100%'
+    },
+    test: {
+        positon: 'relative'
+    },
+    smallButton: {
+        border: '2px solid',
+        color: '#BB9B4E'
+    },
+    smallInfoText: {
+        fontSize:'32px',
+        padding: '5px',
+        color: '#BB9B4E'
+    },
+    smallGetQuoteText: {
+        fontSize: '42px',
+        padding: '5px',
+        color: '#BB9B4E'
+    },
 });
 
 export default styles;
