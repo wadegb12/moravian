@@ -2,7 +2,8 @@ const styles = ({
     smallImageContainer: {
         overflow: 'hidden',
         width: '100%',
-        maxHeight: '90vh'
+        maxHeight: '90vh',
+        position: 'relative'
     },
     imageContainer: {
         overflow: 'hidden',
