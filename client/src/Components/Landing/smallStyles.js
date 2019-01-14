@@ -6,16 +6,20 @@ const styles = ({
     smallInfoText: {
         fontSize:'32px',
         padding: '5px',
-        color: '#BB9B4E'
+        fontWeight: 'bold',
+        color: '#000000',
+        fontWeight: 'bold'
     },
     smallButton: {
         border: '2px solid',
-        color: '#BB9B4E'
+        color: '#000000',
+        fontWeight: 'bold',
     },
     smallGetQuoteText: {
         fontSize: '42px',
         padding: '5px',
-        color: '#BB9B4E'
+        color: '#000000',
+        fontWeight: 'bold'
     },
     smallImageContainer: {
         overflow: 'hidden',
@@ -36,6 +40,7 @@ const styles = ({
         height: 'auto',
         width: '100%',
         alignSelf: 'center',
+        opacity: '0.75',
     },
 
 });
