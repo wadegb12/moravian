@@ -1,6 +1,6 @@
 const styles = ({
     landingPageText: {
-        top: '30%',
+        top: '20%',
         width: '100%'
     },
     smallInfoText: {
@@ -11,7 +11,7 @@ const styles = ({
         fontWeight: 'bold'
     },
     smallButton: {
-        border: '2px solid',
+        border: '4px solid',
         color: '#000000',
         fontWeight: 'bold',
     },
