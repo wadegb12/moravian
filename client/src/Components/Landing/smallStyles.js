@@ -1,6 +1,6 @@
 const styles = ({
     landingPageText: {
-        top: '20%',
+        top: '30%',
         width: '100%'
     },
     smallInfoText: {
