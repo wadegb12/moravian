@@ -13,24 +13,27 @@ const styles = ({
         height: 'auto',
         width: '100%',
         alignSelf: 'center',
+        opacity: '0.85',
+        filer: '50%'
     },
     landingPageText: {
-        top: '30%',
-        width: '100%'
+        top: '20%',
+        width: '100%',
     },
     button: {
-        border: '2px solid',
-        color: '#000000'
+        border: '4px solid',
     },
     infoText: {
         fontSize:'32px',
-        padding: '5px',
-        color: '#000000'
+        padding: '20px',
+        color: '#000000',
+        fontWeight: 'bold'
     },
     getQuoteText: {
         fontSize: '42px',
         padding: '5px',
-        color: '#000000'
+        color: '#000000',
+        fontWeight: 'bold'
     },
 });
 
