@@ -5,9 +5,18 @@ import {db} from "../firebase"
 const postFormData = (data) => {
 
     db.collection("quotes").add({
-        first: data.firstName,
-        last: "Lovelace",
-        born: 1815
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        location: data.location,
+        eventType: data.eventType,
+        guestCount: data.guestCount,
+        barType: data.barType,
+        date: data.date,
+        startTime: data.startTime,
+        startTimeAmPm: data.startTimeAmPm,
+        endTime: data.endTime,
+        endTimeAmPm: data.endTimeAmPm
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);

@@ -6,55 +6,89 @@ import Media from "react-media";
 import { Link } from 'react-router-dom'
 import styles from './styles'
 
+import postFormData from '../../../services/email-service'
+
 class QuoteForm extends Component {
     constructor() {
         super()
 
         this.state = {
             firstName: '', lastName: '', email: '', location: '', eventType: '', 
-            guestCount: '0-50', barType: 'Espresso', date: '', startTime: '', startTimeAmPm: 'Am', 
-            endTime: '', endTimeAmPm: 'Am', comments: '',
+            guestCount: '0-50', barType: 'Espresso', date: '', startTime: '', 
+            startTimeAmPm: 'Am', endTime: '', endTimeAmPm: 'Am', comments: '',
             modal: false,
         }
-
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.toggle = this.toggle.bind(this);
     }
 
-    handleChange = e => {
-        this.setState({ [e.target.name] : e.target.value })
-    }
-
-    toggle() {
-        this.setState({
-          modal: !this.state.modal
-        })
-    }
-
-    async handleSubmit(e) {
-        
-        const { firstName, lastName, email, location, eventType, guestCount, barType, date, 
-            startTime, startTimeAmPm, endTime, endTimeAmPm, comments } = this.state
-
-        if(firstName !== "" && lastName !== "" && email !== "" && location !== "" && eventType !== "" && 
-            // date != "" && 
-            startTime !== "" && endTime !== "") 
+    postData = () => {
+        console.log(this.state)
+        if(this.state.firstName !== "" && this.state.lastName !== "" && this.state.email !== "" && 
+            this.state.location !== "" && this.state.eventType !== "" &&  this.state.date != "" && 
+            this.state.startTime !== "" && this.state.endTime !== "") 
         {
-            await axios.post('/api/form', {
-                firstName, lastName, email, location, eventType, guestCount, barType, date, 
-                startTime, startTimeAmPm, endTime, endTimeAmPm, comments
-            })
+            const data = {
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                email: this.state.email,
+                location: this.state.location,
+                eventType: this.state.eventType,
+                guestCount: this.state.guestCount,
+                barType: this.state.barType,
+                date: this.state.date,
+                startTime: this.state.startTime,
+                startTimeAmPm: this.state.startTimeAmPm,
+                endTime: this.state.endTime,
+                endTimeAmPm: this.state.endTimeAmPm
+
+            }
+
+            postFormData(data)
+
+            this.setState({firstName: '', lastName: '', email: '', location: '', eventType: '', 
+                guestCount: '0-50', barType: 'Espresso', date: '', startTime: '', startTimeAmPm: 'Am', 
+                endTime: '', endTimeAmPm: 'Am', comments: ''})
         }
         else {
-            e.preventDefault()
-
             this.setState({
                 modalMessage: 'Please fill out the entire form' ,
                 modal: !this.state.modal
             })
         }
     }
+
+    handleChange = e => {
+        this.setState({ [e.target.name] : e.target.value })
+    }
+
+    toggle = () => {
+        this.setState({
+          modal: !this.state.modal
+        })
+    }
+
+    // async handleSubmit(e) {
+        
+    //     const { firstName, lastName, email, location, eventType, guestCount, barType, date, 
+    //         startTime, startTimeAmPm, endTime, endTimeAmPm, comments } = this.state
+
+    //     if(firstName !== "" && lastName !== "" && email !== "" && location !== "" && eventType !== "" && 
+    //         // date != "" && 
+    //         startTime !== "" && endTime !== "") 
+    //     {
+    //         await axios.post('/api/form', {
+    //             firstName, lastName, email, location, eventType, guestCount, barType, date, 
+    //             startTime, startTimeAmPm, endTime, endTimeAmPm, comments
+    //         })
+    //     }
+    //     else {
+    //         e.preventDefault()
+
+    //         this.setState({
+    //             modalMessage: 'Please fill out the entire form' ,
+    //             modal: !this.state.modal
+    //         })
+    //     }
+    // }
 
     render() {
         return ( 
@@ -81,6 +115,7 @@ class QuoteForm extends Component {
                                     <Input
                                         style={styles.grayBackground}
                                         type="text"
+                                        value={this.state.firstName}
                                         name="firstName"
                                         placeholder="First"
                                         onChange={this.handleChange} />
@@ -91,6 +126,7 @@ class QuoteForm extends Component {
                                     <Input
                                         style={styles.grayBackground}
                                         type="text"
+                                        value={this.state.lastName}
                                         name="lastName"
                                         placeholder="Last"
                                         onChange={this.handleChange} />
@@ -103,6 +139,7 @@ class QuoteForm extends Component {
                             <Input
                                 style={styles.grayBackground}
                                 type="email"
+                                value={this.state.email}
                                 name="email"
                                 onChange={this.handleChange} />
                         </FormGroup>
@@ -112,6 +149,7 @@ class QuoteForm extends Component {
                                 <Input
                                     style={styles.grayBackground}
                                     type="text"
+                                    value={this.state.location}
                                     name="location"
                                     onChange={this.handleChange} />
                         </FormGroup>
@@ -121,6 +159,7 @@ class QuoteForm extends Component {
                                 <Input
                                     style={styles.grayBackground}
                                     type="text"
+                                    value={this.state.eventType}
                                     name="eventType"
                                     onChange={this.handleChange} />
                         </FormGroup>
@@ -135,6 +174,7 @@ class QuoteForm extends Component {
                                         <Col style={styles.inputFieldMaxWidth}>
                                             <Input 
                                                 type="select"
+                                                value={this.state.guestCount}
                                                 name="guestCount"
                                                 onChange={this.handleChange} 
                                             >
@@ -155,8 +195,8 @@ class QuoteForm extends Component {
                                         </Col>
                                         <Col style={styles.inputFieldMaxWidth}>
                                             <Input 
-                                                
                                                 type="select"
+                                                value={this.state.barType}
                                                 name="barType"
                                                 onChange={this.handleChange} 
                                             >
@@ -178,6 +218,7 @@ class QuoteForm extends Component {
                                                 <Input
                                                     style={styles.dateMaxWidth}
                                                     type="date"
+                                                    value={this.state.date}
                                                     name="date"
                                                     placeholder="date"
                                                     onChange={this.handleChange} 
@@ -195,6 +236,7 @@ class QuoteForm extends Component {
                                         <Col style={styles.inputFieldMaxWidth}>
                                             <Input 
                                                 type="select" 
+                                                value={this.state.startTime}
                                                 name="startTime"
                                                 onChange={this.handleChange} 
                                             >
@@ -216,6 +258,7 @@ class QuoteForm extends Component {
                                         <Col  style={styles.inputAmPm}>
                                             <Input
                                                 type="select"
+                                                value={this.state.startTimeAmPm}
                                                 name="startTimeAmPm"
                                                 onChange={this.handleChange} 
                                             >
@@ -234,6 +277,7 @@ class QuoteForm extends Component {
                                         <Col style={styles.inputFieldMaxWidth}>
                                             <Input 
                                                 type="select" 
+                                                value={this.state.endTime}
                                                 name="endTime"
                                                 onChange={this.handleChange} 
                                             >
@@ -255,6 +299,7 @@ class QuoteForm extends Component {
                                         <Col  style={styles.inputAmPm}>
                                             <Input
                                                 type="select"
+                                                value={this.state.endTimeAmPm}
                                                 name="endTimeAmPm"
                                                 onChange={this.handleChange} 
                                             >
@@ -279,6 +324,7 @@ class QuoteForm extends Component {
                                             <Input 
                                                 style={styles.inputFieldMaxWidth}
                                                 type="select"
+                                                value={this.state.guestCount}
                                                 name="guestCount"
                                                 onChange={this.handleChange} 
                                             >
@@ -301,6 +347,7 @@ class QuoteForm extends Component {
                                             <Input 
                                                 style={styles.inputFieldMaxWidth}
                                                 type="select"
+                                                value={this.state.barType}
                                                 name="barType"
                                                 onChange={this.handleChange} 
                                             >
@@ -320,6 +367,7 @@ class QuoteForm extends Component {
                                         <FormGroup inline>
                                             <Input
                                                 type="date"
+                                                value={this.state.date}
                                                 name="date"
                                                 placeholder="date"
                                                 onChange={this.handleChange} 
@@ -337,6 +385,7 @@ class QuoteForm extends Component {
                                             <Input 
                                                 style={styles.inputFieldMaxWidth}
                                                 type="select" 
+                                                value={this.state.startTime}
                                                 name="startTime"
                                                 onChange={this.handleChange} 
                                             >
@@ -360,6 +409,7 @@ class QuoteForm extends Component {
                                         <FormGroup>
                                             <Input
                                                 type="select"
+                                                value={this.state.startTimeAmPm}
                                                 name="startTimeAmPm"
                                                 onChange={this.handleChange} 
                                             >
@@ -379,6 +429,7 @@ class QuoteForm extends Component {
                                             <Input 
                                                 style={styles.inputFieldMaxWidth}
                                                 type="select" 
+                                                value={this.state.endTime}
                                                 name="endTime"
                                                 onChange={this.handleChange} 
                                             >
@@ -402,6 +453,7 @@ class QuoteForm extends Component {
                                         <FormGroup inline>
                                             <Input
                                                 type="select"
+                                                value={this.state.startTimeAmPm}
                                                 name="startTimeAmPm"
                                                 onChange={this.handleChange} 
                                             >
@@ -419,13 +471,12 @@ class QuoteForm extends Component {
                             <Input
                                 style={styles.grayBackground}
                                 type="textarea"
+                                value={this.state.comments}
                                 name="comments"
                                 onChange={this.handleChange} />
                         </FormGroup>
                         
-                        <Button 
-                            component={Link} to="/"
-                        > 
+                        <Button onClick={this.postData}> 
                             Submit 
                         </Button>
                         
