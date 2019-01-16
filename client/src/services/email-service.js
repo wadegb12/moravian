@@ -5,6 +5,7 @@ import {db} from "../firebase"
 const postFormData = (data) => {
 
     db.collection("quotes").add({
+        // timestamp: `${Date.now()}`,
         firstName: data.firstName,
         lastName: data.lastName,
         email: data.email,
@@ -18,12 +19,12 @@ const postFormData = (data) => {
         endTime: data.endTime,
         endTimeAmPm: data.endTimeAmPm
     })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
+    // .then(function(docRef) {
+    //     console.log("Document written with ID: ", docRef.id);
+    // })
+    // .catch(function(error) {
+    //     console.error("Error adding document: ", error);
+    // });
 }
 
 export default postFormData

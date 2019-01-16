@@ -21,7 +21,7 @@ class QuoteForm extends Component {
     }
 
     postData = () => {
-        console.log(this.state)
+        // console.log(this.state)
         if(this.state.firstName !== "" && this.state.lastName !== "" && this.state.email !== "" && 
             this.state.location !== "" && this.state.eventType !== "" &&  this.state.date != "" && 
             this.state.startTime !== "" && this.state.endTime !== "") 
