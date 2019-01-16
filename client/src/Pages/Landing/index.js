@@ -1,6 +1,5 @@
 import React from 'react'
 import { Page } from '../../Components'
-import PropTypes from 'prop-types';
 import Media from "react-media";
 import SmallLandingPhoto from '../../Components/Landing/SmallLandingPage/Photo';
 import SmallLandingText from '../../Components/Landing/SmallLandingPage/Text';
@@ -28,10 +27,6 @@ const LandingPage = ({ history }) => {
         </Page>
     )
 }
-
-LandingPage.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
 export default LandingPage;
 

@@ -22,7 +22,6 @@ class SideNavBar extends React.Component {
 
     render() {
 
-        console.log(this.state)
         return (
             <AppBar position="static">
                 <div style={styles.sideNavBar}>

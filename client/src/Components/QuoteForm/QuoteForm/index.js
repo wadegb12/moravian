@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
 import { Col, Row, Form, FormGroup, Input, Label} from 'reactstrap'
 import { Button, Modal, ModalHeader} from 'reactstrap'
-import axios from 'axios'
 import Media from "react-media";
-import { Link } from 'react-router-dom'
 import styles from './styles'
 
 import postFormData from '../../../services/email-service'
@@ -21,9 +19,8 @@ class QuoteForm extends Component {
     }
 
     postData = () => {
-        // console.log(this.state)
         if(this.state.firstName !== "" && this.state.lastName !== "" && this.state.email !== "" && 
-            this.state.location !== "" && this.state.eventType !== "" &&  this.state.date != "" && 
+            this.state.location !== "" && this.state.eventType !== "" &&  this.state.date !== "" && 
             this.state.startTime !== "" && this.state.endTime !== "") 
         {
             const data = {
@@ -39,7 +36,6 @@ class QuoteForm extends Component {
                 startTimeAmPm: this.state.startTimeAmPm,
                 endTime: this.state.endTime,
                 endTimeAmPm: this.state.endTimeAmPm
-
             }
 
             postFormData(data)
@@ -70,30 +66,6 @@ class QuoteForm extends Component {
           modal: !this.state.modal
         })
     }
-
-    // async handleSubmit(e) {
-        
-    //     const { firstName, lastName, email, location, eventType, guestCount, barType, date, 
-    //         startTime, startTimeAmPm, endTime, endTimeAmPm, comments } = this.state
-
-    //     if(firstName !== "" && lastName !== "" && email !== "" && location !== "" && eventType !== "" && 
-    //         // date != "" && 
-    //         startTime !== "" && endTime !== "") 
-    //     {
-    //         await axios.post('/api/form', {
-    //             firstName, lastName, email, location, eventType, guestCount, barType, date, 
-    //             startTime, startTimeAmPm, endTime, endTimeAmPm, comments
-    //         })
-    //     }
-    //     else {
-    //         e.preventDefault()
-
-    //         this.setState({
-    //             modalMessage: 'Please fill out the entire form' ,
-    //             modal: !this.state.modal
-    //         })
-    //     }
-    // }
 
     render() {
         return ( 

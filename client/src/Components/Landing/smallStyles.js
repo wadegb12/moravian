@@ -8,7 +8,6 @@ const styles = ({
         padding: '5px',
         fontWeight: 'bold',
         color: '#000000',
-        fontWeight: 'bold'
     },
     smallButton: {
         border: '4px solid',
