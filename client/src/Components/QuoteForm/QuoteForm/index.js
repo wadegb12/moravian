@@ -47,6 +47,11 @@ class QuoteForm extends Component {
             this.setState({firstName: '', lastName: '', email: '', location: '', eventType: '', 
                 guestCount: '0-50', barType: 'Espresso', date: '', startTime: '', startTimeAmPm: 'Am', 
                 endTime: '', endTimeAmPm: 'Am', comments: ''})
+
+                this.setState({
+                    modalMessage: 'We will get back to you shortly!' ,
+                    modal: !this.state.modal
+                })
         }
         else {
             this.setState({
