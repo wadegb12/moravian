@@ -20,11 +20,6 @@ const styles = ({
         color: '#000000',
         fontWeight: 'bold'
     },
-    smallImageContainer: {
-        overflow: 'hidden',
-        width: '100%',
-        maxHeight: '90vh'
-    },
     imageContainer: {
         overflow: 'hidden',
         width: '100%',
@@ -39,7 +34,7 @@ const styles = ({
         height: 'auto',
         width: '100%',
         alignSelf: 'center',
-        opacity: '0.75',
+        // opacity: '0.75',
     },
 
 });
