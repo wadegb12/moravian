@@ -13,11 +13,10 @@ const styles = ({
         height: 'auto',
         width: '100%',
         alignSelf: 'center',
-        opacity: '0.85',
         filer: '50%'
     },
     landingPageText: {
-        top: '20%',
+        top: '35%',
         width: '100%',
     },
     button: {
