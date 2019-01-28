@@ -8,8 +8,7 @@ import Button from './Button';
 import SideNavBar from './SideNavBar';
 import SideNav from './SideNav';
 import QuoteForm from './QuoteForm/QuoteForm';
-import LargeLandingPhoto from './Landing/LargeLandingPage/Photo';
-import LargeLandingText from './Landing/LargeLandingPage/Text';
+import LargeLandingPage from './Landing/LargeLandingPage'
 import SmallLandingPhoto from './Landing/SmallLandingPage/Photo';
 import SmallLandingText from './Landing/SmallLandingPage/Text';
 
@@ -24,8 +23,7 @@ export {
     SideNavBar,
     SideNav,
     QuoteForm,
-    LargeLandingPhoto,
-    LargeLandingText,
     SmallLandingPhoto,
     SmallLandingText,
+    LargeLandingPage,
 }

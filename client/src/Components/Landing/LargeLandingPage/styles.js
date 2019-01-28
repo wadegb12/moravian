@@ -19,6 +19,10 @@ const styles = ({
         top: '35%',
         width: '100%',
     },
+    smallLandingPageText: {
+        top: '20%',
+        width: '100%',
+    },
     button: {
         border: '4px solid',
     },
