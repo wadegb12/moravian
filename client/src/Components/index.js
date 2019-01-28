@@ -9,8 +9,7 @@ import SideNavBar from './SideNavBar';
 import SideNav from './SideNav';
 import QuoteForm from './QuoteForm/QuoteForm';
 import LargeLandingPage from './Landing/LargeLandingPage'
-import SmallLandingPhoto from './Landing/SmallLandingPage/Photo';
-import SmallLandingText from './Landing/SmallLandingPage/Text';
+import SmallLandingPage from './Landing/SmallLandingPage';
 
 export {
     Loading,
@@ -23,7 +22,6 @@ export {
     SideNavBar,
     SideNav,
     QuoteForm,
-    SmallLandingPhoto,
-    SmallLandingText,
     LargeLandingPage,
+    SmallLandingPage,
 }
